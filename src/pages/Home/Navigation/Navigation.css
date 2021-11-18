@@ -1,0 +1,14 @@
+.nav-container{
+    background-image: url('https://i.postimg.cc/L4wWk6yx/img-slider-01.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.nav-inner{
+    height: 700px;
+    /* width: 100%; */
+    /* background-color: rgba(0, 0, 0, 0.445); */
+    color: white;
+}
+.navItems Button{
+    color: black;
+}

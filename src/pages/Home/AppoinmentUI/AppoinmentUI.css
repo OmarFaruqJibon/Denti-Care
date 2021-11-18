@@ -1,0 +1,9 @@
+.appoinmentBg{
+    background-image: url('https://i.postimg.cc/D030tY6w/b.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: darken, luminosity;
+    background-color: rgba(35, 35, 54, 0.924);
+    margin-top: 130px;
+    margin-bottom: 130px;
+}
