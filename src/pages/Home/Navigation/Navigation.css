@@ -5,10 +5,15 @@
 }
 .nav-inner{
     height: 700px;
-    /* width: 100%; */
+    width: 100%;
     /* background-color: rgba(0, 0, 0, 0.445); */
     color: white;
 }
 .navItems Button{
     color: black;
 }
+/* .curved{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+} */

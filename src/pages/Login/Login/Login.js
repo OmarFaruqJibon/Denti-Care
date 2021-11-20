@@ -1,7 +1,6 @@
 import { Alert, Button, CircularProgress, Container, Grid, TextField, Typography } from '@mui/material';
 import React, { useState } from 'react';
 import { Link , useLocation , useHistory} from 'react-router-dom';
-import loginImg from '../../../images/login.png';
 import useAuth from '../../hooks/useAuth';
 const Login = () => {
     const {user, authError, userLogin, googleLogin, isLoading} = useAuth();
@@ -30,6 +29,7 @@ const Login = () => {
 
     return (
         <Container className="App">
+            {isLoading && <CircularProgress/>}
             <Grid container spacing={2}>
                 {!isLoading && <Grid sx={{mt:8}} item xs={12} md={6}>
                     <Typography sx={{fontWeight: "bold"}} variant="h5">Login</Typography>
@@ -62,7 +62,13 @@ const Login = () => {
                         <Typography sx={{ mt:1}} variant="body1">New user? Please Register</Typography>
                     </Link>
                     <Typography sx={{ mt:1}} variant="body1">-------------OR-------------</Typography>
-                    <Button onClick={handleGoogleLogin} sx={{mt:3}} style={{width:"100%"}} variant="contained">Login with Google</Button>
+                    <Button onClick={handleGoogleLogin} sx={{mt:3}} style={{width:"100%"}} variant="contained">
+                        {/* <img 
+                        className="googleIcon"
+                        width="25px"
+                        src={'https://i.postimg.cc/gcMqbTF7/google.png'} alt="" />  */}
+                        Login with Google
+                    </Button>
 
                     {
                         user.email && <Alert severity="success">Login Succesfully!</Alert>
@@ -74,12 +80,12 @@ const Login = () => {
 
                 </Grid>}
 
-                    {isLoading && <CircularProgress/>}
+                    
 
                 <Grid item xs={12} md={6}>
                     <img 
                     width="100%"
-                    src={loginImg} alt=""/>
+                    src={'https://i.postimg.cc/8CkqcYc6/Login-bro.png'} alt=""/>
                 </Grid>
             </Grid>
 

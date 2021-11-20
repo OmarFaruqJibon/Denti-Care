@@ -4,25 +4,22 @@ import Grid from '@mui/material/Grid';
 import { Container } from '@mui/material';
 import Typography from '@mui/material/Typography';
 import Service from './../Service/Service';
-import fluoride from '../../../images/fluoride.png';
-import cavity from '../../../images/cavity.png';
-import whitening from '../../../images/whitening.png';
 
 const services = [
     {
-        name: 'Fluoride Treatment',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed culpa cumque enim! Voluptatibus aliquid expedita saepe accusantium itaque ducimus rem voluptas',
-        img: fluoride
+        name: 'Teeth Braces',
+        description: 'Braces have constant pressure which, over time, move teeth into the desired positions. The process loosens the tooth',
+        img: 'https://i.postimg.cc/0ymRxGhg/tooth-filling_(1).png'
     },
     {
-        name: 'Cavity Filling',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed culpa cumque enim! Voluptatibus aliquid expedita saepe accusantium itaque ducimus rem voluptas',
-        img: cavity
+        name: 'Whitening',
+        description: 'Teeth whitening is not permanent It can lasts up to 3 years – it varies from person to person. The whitening effect last as long if you smoke or drink red',
+        img: 'https://i.postimg.cc/WbdcYcn1/tooth-filling_(2).png'
     },
     {
-        name: 'Teeth Whitening',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed culpa cumque enim! Voluptatibus aliquid expedita saepe accusantium itaque ducimus rem voluptas',
-        img: whitening
+        name: 'Dental Surgery',
+        description: 'Dental surgery is any of a number of medical procedures that involve artificially modifying dentition; in other words',
+        img: 'https://i.postimg.cc/rF7XvZnC/dental-care.png'
     }
 ]
 
@@ -30,12 +27,12 @@ const Services = () => {
     return (
             <Box className="App" sx={{ flexGrow: 1, mt:8 }}>
                 <Container>
-                    <Typography sx={{ fontWeight: 500, m: 1, color: 'primary.main' }} variant="h6" component="div">
+                    {/* <Typography sx={{ fontWeight: 500, m: 1, color: 'primary.main' }} variant="h6" component="div">
                         OUR SERVICES
                     </Typography>
                     <Typography sx={{ fontWeight: 600, mb: 8 }} variant="h4" component="div">
                         Services We Provide
-                    </Typography>
+                    </Typography> */}
                     <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
                         {services.map((service, index) => (
                         <Grid item xs={4} sm={4} md={4} key={index}>

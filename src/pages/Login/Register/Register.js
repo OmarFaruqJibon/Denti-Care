@@ -79,7 +79,7 @@ const Register = () => {
                         <Button type="submit" sx={{mt:3}} style={{width:"100%"}} variant="contained">Register</Button>
                     </form>
                     <Link to="/login" style={{textDecoration: "none"}}>
-                        <Typography sx={{ mt:1}} variant="body1">Already registered? Please Login</Typography>
+                        <Typography sx={{ mt:1}} variant="body1">Already user? Please Login</Typography>
                     </Link>
                     <br />
                     
@@ -96,7 +96,7 @@ const Register = () => {
                 <Grid item xs={12} md={6}>
                     <img 
                     width="100%"
-                    src={loginImg} alt=""/>
+                    src={'https://i.postimg.cc/T1bsBM7Z/Mobile-login-rafiki.png'} alt=""/>
                 </Grid>
             </Grid>
         </Container>

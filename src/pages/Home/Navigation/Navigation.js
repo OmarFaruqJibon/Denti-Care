@@ -38,13 +38,17 @@ const Navigation = () => {
               }
         },
         mobileNav:{
-            color: 'black',
             textDecoration: 'none',
-            display: 'flex',
-            flexDirection: 'colum'
+            fontWeight: 'bold',
+            color: '#1976d2'
+        },
+        mobileNavList:{
+            borderBottom: '1px solid #80808066',
+            width: '100%',
+            textAlign: 'left',
+            paddingTop: '20px',
         },
         sideMinuList:{
-          
           display: 'flex',
           flexDirection: 'column',
         },
@@ -52,7 +56,7 @@ const Navigation = () => {
             color: 'black'
         }
     });
-    const {navItem, navIcon, navItems,navLogo,mobileNav,sideMinuList} = useStyle();
+    const {navItem, navIcon, navItems,navLogo,mobileNav,sideMinuList,mobileNavList} = useStyle();
 
 
 
@@ -65,27 +69,40 @@ const Navigation = () => {
         sx={{ width: 250 }}
         role="presentation"
       >
-        <List>
+        <List style={{textAlign: 'left'}}>
             <ListItem className={sideMinuList}>
-                <ListItemText className={mobileNav}>
-                    <Link className={mobileNav} to="/">Home</Link>
+                <ListItemText className={mobileNavList}>
+                    <Link className={mobileNav} to="/appoinment">Appoinment</Link>
                 </ListItemText>
                 <Divider />
-                <br/>
-                <ListItemText className={mobileNav}>
+
+                <ListItemText className={mobileNavList}>
                     <Link className={mobileNav} to="/dashboard">Dashboard</Link>
                 </ListItemText>
                 <Divider />
+
+                <ListItemText className={mobileNavList}>
+                    <Link className={mobileNav} to="/about">About</Link>
+                </ListItemText>
+                <Divider />
+
+                <ListItemText className={mobileNavList}>
+                    <Link className={mobileNav} to="/contact">Contact</Link>
+                </ListItemText>
+                <Divider />
+
                 <br/>
                 <ListItemText>
                     {
                         user.email ? 
-                        <Link className={mobileNav} to="/">Log out</Link>
-                        :<Link className={mobileNav} to="/login">Login</Link>
-                        }
+                        <Button onClick={logOut} sx={{ml:1}} variant="contained" color="success">Logout</Button>
+                        :<Link style={{ textDecoration: 'none' }} to="/login">
+                        <Button  variant="contained" color="success" sx={{ml:1}}>Login</Button>
+                        </Link>
+                    }
                 </ListItemText>
                 <Divider />
-                <br/>
+
             </ListItem>
         </List>
         
@@ -93,7 +110,13 @@ const Navigation = () => {
     );
 //------------ nav drawer end
 
+{/* <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#0099ff" fill-opacity="1" d="M0,288L120,250.7C240,213,480,139,720,144C960,149,1200,235,1320,277.3L1440,320L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path></svg>
 
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#0099ff" fill-opacity="1" d="M0,192L120,170.7C240,149,480,107,720,122.7C960,139,1200,213,1320,250.7L1440,288L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path></svg>
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#0099ff" fill-opacity="1" d="M0,160L60,170.7C120,181,240,203,360,186.7C480,171,600,117,720,117.3C840,117,960,171,1080,192C1200,213,1320,203,1380,197.3L1440,192L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>
+
+*/}
 
     return (
         <div className="nav-container nav-inner">
@@ -157,6 +180,8 @@ const Navigation = () => {
                     </div>
                 {/* mav drawer end*/}
             </Box>
+
+
         </div>
     );
 
