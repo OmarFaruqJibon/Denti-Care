@@ -5,6 +5,7 @@ import Navigation from '../Navigation/Navigation';
 import Services from '../Services/Services';
 import Quote from '../Quote/Quote';
 import Contact from '../../Contact/Contact';
+import Team from '../Team/Team';
 
 const Home = () => {
     return (
@@ -14,6 +15,7 @@ const Home = () => {
             <Services></Services>
             <KidsCare></KidsCare>
             <Quote></Quote>
+            <Team></Team>
             <AppoinmentUI></AppoinmentUI>
             <Contact></Contact>
         </div>
