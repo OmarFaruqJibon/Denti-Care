@@ -6,6 +6,7 @@ import Services from '../Services/Services';
 import Quote from '../Quote/Quote';
 import Contact from '../../Contact/Contact';
 import Team from '../Team/Team';
+import Footer from '../../Shared/Footer/Footer';
 
 const Home = () => {
     return (
@@ -18,6 +19,17 @@ const Home = () => {
             <Team></Team>
             <AppoinmentUI></AppoinmentUI>
             <Contact></Contact>
+
+            <Footer></Footer>
+
+
+
+
+
+
+
+
+
         </div>
     );
 };
