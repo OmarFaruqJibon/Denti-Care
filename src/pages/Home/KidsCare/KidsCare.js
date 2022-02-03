@@ -9,32 +9,32 @@ import './KidsCare.css';
 
 const KidsCare = () => {
     return (
-        <Box sx={{ flexGrow: 1 , p: 4}}>
+        <Box sx={{ flexGrow: 1 , p: 5}}>
             <Grid my={8}  container spacing={2}>
-                <Grid  className="kidsCareWrapper" item xs={12} md={6}>
+                <Grid className="kidsCareWrapper" item xs={12} md={6}>
                    <Box>
                    <Box>
-                        <Typography style={{color: '#115278'}} mt={2} variant="h4">
+                        <Typography style={{color: '#115278', fontWeight: 'bold'}} mt={2} variant="h4">
                             Kids Oral Care
                         </Typography>
-                        <Typography sx={{mt:3}}  variant="body2">
-                            Dental Hygiene for Kids · Use a pea-sized amount of fluoride toothpaste and make <br /> sure your child spits
+                        <Typography sx={{mt:3}}  variant="body1">
+                            Brush your teeth twice a day and floss at least once a day. Brushing also stimulates the gums, which helps to keep them  healthy and prevent gum disease.
                         </Typography>
                     </Box>
                     
                     <Box>
                        <Grid my={5}  container spacing={2}>
                             <Grid  item xs={12} md={4}>
-                                <Card sx={{ maxWidth: 345, boxShadow: 0, textAlign: 'center' }}>
+                                <Card sx={{ maxWidth: 345, boxShadow: 0, textAlign: 'center', margin: '0 auto' }}>
                                     <CardActionArea >
                                         <CardMedia
                                             component="img"
                                             style={{width: 'auto', height: '80px', margin: '0 auto'}}
-                                            image={'https://i.postimg.cc/N0DjqgwW/dental-checkup-1.png'}
+                                            image={'https://i.postimg.cc/7ZYqwsXw/dental-care.png'}
                                             alt="green iguana"
                                         />
                                         <CardContent>
-                                            <Typography gutterBottom variant="h5" color="#1ebeb6" component="div">
+                                            <Typography gutterBottom variant="h6" color="black" component="div">
                                             Prosthesis
                                             </Typography>
                                             <Typography variant="body2" color="text.secondary">
@@ -46,16 +46,16 @@ const KidsCare = () => {
                            </Grid>
                            
                             <Grid  item xs={12} md={4}>
-                                <Card sx={{ maxWidth: 345, boxShadow: 0, textAlign: 'center'  }}>
+                                <Card sx={{ maxWidth: 345, boxShadow: 0, textAlign: 'center', margin: '0 auto'  }}>
                                     <CardActionArea>
                                         <CardMedia
                                             component="img"
                                             style={{width: 'auto', height: '80px', margin: '0 auto'}}
-                                            image={'https://i.postimg.cc/k5pkL451/dental-checkup-5.png'}
+                                            image={'https://i.postimg.cc/Hnmk5QD2/broken-tooth.png'}
                                             alt="green iguana"
                                         />
                                         <CardContent>
-                                            <Typography gutterBottom variant="h5" color= "#115278" component="div">
+                                            <Typography gutterBottom variant="h6" color="black" component="div">
                                             Alignment
                                             </Typography>
                                             <Typography variant="body2" color="text.secondary">
@@ -67,16 +67,16 @@ const KidsCare = () => {
                            </Grid>
 
                             <Grid  item xs={12} md={4}>
-                                <Card sx={{ maxWidth: 345, boxShadow: 0, textAlign: 'center'  }}>
+                                <Card sx={{ maxWidth: 345, boxShadow: 0, textAlign: 'center', margin: '0 auto'  }}>
                                     <CardActionArea>
                                         <CardMedia
                                             component="img"
                                             style={{width: 'auto', height: '80px', margin: '0 auto'}}
-                                            image={'https://i.postimg.cc/gJwKjyWp/dental-checkup-6.png'}
+                                            image={'https://i.postimg.cc/HxXLV6Kn/dental-care-1.png'}
                                             alt="green iguana"
                                         />
                                         <CardContent>
-                                            <Typography gutterBottom variant="h5" color="#1ebeb6" component="div">
+                                            <Typography gutterBottom variant="h6" color="black" component="div">
                                             Implants
                                             </Typography>
                                             <Typography variant="body2" color="text.secondary">
@@ -93,8 +93,8 @@ const KidsCare = () => {
                     </Box>
                    </Box>
                 </Grid>
-                <Grid item xs={12} md={6}>
-                    <img  style={{width: '100%', }} src={'https://i.postimg.cc/pdWcV9TL/kid.png'} alt="" />
+                <Grid style={{textAlign: 'center'}} item xs={12} md={6}>
+                    <img  style={{width: '80%'}} src={'https://i.postimg.cc/pdWcV9TL/kid.png'} alt="" />
                 </Grid>
             </Grid>
         </Box>

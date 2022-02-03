@@ -10,7 +10,7 @@ const Service = (props) => {
     const {name,description, img} = props.service;
 
     return (
-        <Card sx={{ maxWidth: 345, boxShadow: 0 }}>
+        <Card style={{ margin: '0 auto'}} sx={{ maxWidth: 345, boxShadow: 0 }}>
             <CardActionArea>
                 <CardMedia
                     component="img"
@@ -19,7 +19,7 @@ const Service = (props) => {
                     alt="green iguana"
                 />
                 <CardContent>
-                    <Typography gutterBottom variant="h5" component="div">
+                    <Typography gutterBottom variant="h6" component="div" sx={{ fontWeight: 'bold'}}>
                         {name}
                     </Typography>
                     <Typography variant="body2" color="text.secondary">

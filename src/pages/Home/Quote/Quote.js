@@ -20,19 +20,23 @@ const Quote = () => {
         },
         quoteMail:{
             backgroundColor: 'white !important',
-            borderRadius: '30px',
+            // borderTopLeftRadius: '30px',
+            // borderBottomLeftRadius: '30px',
             boxShadow: 'none !important',
             border: 'none !important',
             width: '60%'
         },
         quoteBtn:{
-            marginLeft: '5px',
-            backgroundColor:'#115278',
-            borderRadius: '30px',
+            backgroundColor:'#115278','&:hover': {
+                background: "#073c5b"
+             },
+            borderTopRightRadius: '30px',
+            borderBottomRightRadius: '30px',
             border: 'none',
             padding: '12px 25px',
-            color: 'white'
-        }
+            color: 'white',
+            cursor: 'pointer'
+        },
     });
 
     const {quoteBg,quoteBody,quoteMail,quoteBtn,quoteInputField} = useStyle();
@@ -41,8 +45,8 @@ const Quote = () => {
         <Box className={quoteBg} sx={{ flexGrow: 1 , p: 4}}>
             
             <Grid container spacing={2}>
-                <Grid item xs={12} md={6}>
-                    <img  style={{width: '100%', }} src={'https://i.postimg.cc/K8rsy7mW/tooth-brush.png'} alt=""/>
+                <Grid style={{textAlign: 'center'}} item xs={12} md={6}>
+                    <img  style={{width: '80%', }} src={'https://i.postimg.cc/K8rsy7mW/tooth-brush.png'} alt=""/>
                 </Grid>
 
                 <Grid className={quoteBody} item xs={12} md={6}>
@@ -50,8 +54,8 @@ const Quote = () => {
                         <Typography sx={{fontWeight:'bold', color:"#115278"}} variant="h4" component="div">
                             Get A Quote
                         </Typography>
-                        <Typography sx={{mt:4, color:'white'}} variant="body2" color="text.secondary">
-                            Efficiently enable enabled sources and cost effective products. Completely <br />
+                        <Typography sx={{mt:4, color:'white'}} variant="body1" color="text.secondary">
+                            Efficiently enable enabled sources and cost effective products. Completely
                             synthesize principle-centered information.
                         </Typography>
                     </Box>
@@ -61,7 +65,7 @@ const Quote = () => {
                             className={quoteMail} 
                             hiddenLabel
                             id="filled-hidden-label-small"
-                            placeholder="Small"
+                            placeholder="Your email"
                             variant="filled"
                             size="small" 
                         />

@@ -59,7 +59,7 @@ const Footer = () => {
 
                         <Grid  item xs={12} md={3}>
                                 <Typography sx={{fontWeight:'bold', color:"#115278"}} variant="h6" component="div">
-                                    Our Awords
+                                    Our Awards
                                 </Typography>
                                 <Typography sx={{mt:2, color:'black', lineHeight: '30px'}} variant="body2" color="text.secondary">
                                     Best Patient Care 2017 <br />

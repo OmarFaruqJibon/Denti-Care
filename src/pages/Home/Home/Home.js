@@ -23,7 +23,7 @@ const Home = () => {
             <Footer></Footer>
 
 
-
+            {/*pest clr:  #1fa386  #129A7C*/}
 
 
 

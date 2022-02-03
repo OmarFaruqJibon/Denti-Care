@@ -14,39 +14,44 @@ import { makeStyles } from '@mui/styles';
 const Team = () => {
     const useStyle = makeStyles({
         socialIcon:{
-            
+            fontSize: '12px',
             display: 'flex !important',
             justifyContent: 'center !important',
         },
         titleColor:{
-            color: '#0e54ae'
+            color: '#115278'
+        },
+        teamCard:{
+            '&:hover': {
+                    transform: 'scale(1.1, 1.1)',
+                    transition: 'all 0.5s ease-in-out',
+             },
         }
     });
 
-    const {socialIcon, titleColor} = useStyle();
+    const {socialIcon, titleColor,teamCard} = useStyle();
 
 
     return (
-        <Box className="App" sx={{ flexGrow: 1, mt:8 }}>
-
+        <Box className="App" sx={{ flexGrow: 1, marginTop: '90px' }}>
 
                 <Container>
-                    <Typography sx={{ fontWeight: 500, m: 1,  }} variant="h6" component="div">
+                    <Typography sx={{ fontWeight: 400, mb: 1}} variant="h6" component="div">
                         DentiCare
                     </Typography>
-                    <Typography  className={titleColor} sx={{ fontWeight: 600, mb: 4}} variant="h4" component="div">
-                    Specialized Team
+                    <Typography  className={titleColor} sx={{ fontWeight: 600, mb: 3}} variant="h4" component="div">
+                        Specialized Team
                     </Typography>
 
-                    <Typography sx={{ mb: 8 }} variant="p" component="div">
-                    "We are a team of dentists, hygienists and  receptionists who work together to ensure that you <br /> receive the best treatment that you require at a very <br /> time that suits you."
+                    <Typography sx={{ mb: 8 }} variant="p" component="div" color="text.secondary">
+                        "We are a team of dentists, hygienists and  receptionists who work together to ensure that you <br /> receive the best treatment that you require at a very <br /> time that suits you."
                     </Typography>
 
 
 
                     <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
                         <Grid item xs={12} sm={6} md={3}>
-                            <Card sx={{ maxWidth: 345 }}>
+                            <Card className={teamCard} sx={{ maxWidth: 345, margin: '0 auto' }}>
                                 <CardMedia
                                     component="img"
                                     alt="doctor"
@@ -62,15 +67,16 @@ const Team = () => {
                                     </Typography>
                                 </CardContent>
                                 <CardActions className={socialIcon}>
-                                    <Button sx={{ fontSize: "20px" }}><i className="fab fa-facebook"></i></Button>
-                                    <Button sx={{ fontSize: "20px" }}><i className="fab fa-twitter-square"></i></Button>
-                                    <Button  sx={{ fontSize: "20px" }}><i className="fab fa-linkedin"></i></Button>
+                                        <Button sx={{ fontSize: "17px", color: '#115278'}}><i className="fab fa-facebook-f"></i></Button>
+                                        <Button sx={{ fontSize: "17px", color: '#115278' }}><i className="fab fa-twitter"></i></Button>
+                                        <Button sx={{ fontSize: "17px", color: '#115278' }}><i className="fab fa-linkedin-in"></i></Button>
+                                        <Button sx={{ fontSize: "17px" , color: '#115278'}}><i className="fab fa-youtube"></i></Button>
                                 </CardActions>
                             </Card>
                         </Grid>
 
                         <Grid item xs={12} sm={6} md={3}>
-                            <Card sx={{ maxWidth: 345 }}>
+                            <Card className={teamCard} sx={{ maxWidth: 345, margin: '0 auto' }}>
                                 <CardMedia
                                     component="img"
                                     alt="doctor"
@@ -86,15 +92,16 @@ const Team = () => {
                                     </Typography>
                                 </CardContent>
                                 <CardActions className={socialIcon}>
-                                    <Button sx={{ fontSize: "20px" }}><i className="fab fa-facebook"></i></Button>
-                                    <Button sx={{ fontSize: "20px" }}><i className="fab fa-twitter-square"></i></Button>
-                                    <Button  sx={{ fontSize: "20px" }}><i className="fab fa-linkedin"></i></Button>
+                                        <Button sx={{ fontSize: "17px", color: '#115278'}}><i className="fab fa-facebook-f"></i></Button>
+                                        <Button sx={{ fontSize: "17px", color: '#115278' }}><i className="fab fa-twitter"></i></Button>
+                                        <Button sx={{ fontSize: "17px", color: '#115278' }}><i className="fab fa-linkedin-in"></i></Button>
+                                        <Button sx={{ fontSize: "17px" , color: '#115278'}}><i className="fab fa-youtube"></i></Button>
                                 </CardActions>
                             </Card>
                         </Grid>
 
                         <Grid item xs={12} sm={6} md={3}>
-                            <Card sx={{ maxWidth: 345 }}>
+                            <Card className={teamCard} sx={{ maxWidth: 345, margin: '0 auto' }}>
                                 <CardMedia
                                     component="img"
                                     alt="doctor"
@@ -110,15 +117,16 @@ const Team = () => {
                                     </Typography>
                                 </CardContent>
                                 <CardActions className={socialIcon}>
-                                    <Button sx={{ fontSize: "20px" }}><i className="fab fa-facebook"></i></Button>
-                                    <Button sx={{ fontSize: "20px" }}><i className="fab fa-twitter-square"></i></Button>
-                                    <Button  sx={{ fontSize: "20px" }}><i className="fab fa-linkedin"></i></Button>
+                                        <Button sx={{ fontSize: "17px", color: '#115278'}}><i className="fab fa-facebook-f"></i></Button>
+                                        <Button sx={{ fontSize: "17px", color: '#115278' }}><i className="fab fa-twitter"></i></Button>
+                                        <Button sx={{ fontSize: "17px", color: '#115278' }}><i className="fab fa-linkedin-in"></i></Button>
+                                        <Button sx={{ fontSize: "17px" , color: '#115278'}}><i className="fab fa-youtube"></i></Button>
                                 </CardActions>
                             </Card>
                         </Grid>
 
                         <Grid item xs={12} sm={6} md={3}>
-                            <Card sx={{ maxWidth: 345 }}>
+                            <Card className={teamCard} sx={{ maxWidth: 345,margin: '0 auto' }}>
                                 <CardMedia
                                     component="img"
                                     alt="doctor"
@@ -134,11 +142,10 @@ const Team = () => {
                                     </Typography>
                                 </CardContent>
                                 <CardActions className={socialIcon}>
-                                    <Box sx={{ textAlign: "center" }}>
-                                    <Button sx={{ fontSize: "20px" }}><i className="fab fa-facebook"></i></Button>
-                                    <Button sx={{ fontSize: "20px" }}><i className="fab fa-twitter-square"></i></Button>
-                                    <Button  sx={{ fontSize: "20px" }}><i className="fab fa-linkedin"></i></Button>
-                                    </Box>
+                                        <Button sx={{ fontSize: "17px", color: '#115278'}}><i className="fab fa-facebook-f"></i></Button>
+                                        <Button sx={{ fontSize: "17px", color: '#115278' }}><i className="fab fa-twitter"></i></Button>
+                                        <Button sx={{ fontSize: "17px", color: '#115278' }}><i className="fab fa-linkedin-in"></i></Button>
+                                        <Button sx={{ fontSize: "17px" , color: '#115278'}}><i className="fab fa-youtube"></i></Button>
                                 </CardActions>
                             </Card>
                         </Grid>

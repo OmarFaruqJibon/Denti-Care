@@ -16,6 +16,7 @@ import List from '@mui/material/List';
 import Divider from '@mui/material/Divider';
 import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
+
   
 const Navigation = () => {
     const theme = useTheme();
@@ -54,13 +55,19 @@ const Navigation = () => {
         },
         navItem:{
             color: 'black'
+        },
+        bannerTitle:{
+            position: 'absolute',
+            top: '43%',
+            left: '10%',
+            lineHeight: '30px',
+
         }
     });
-    const {navItem, navIcon, navItems,navLogo,mobileNav,sideMinuList,mobileNavList} = useStyle();
+    const {navItem, navIcon, navItems,navLogo,mobileNav,sideMinuList,mobileNavList, bannerTitle} = useStyle();
 
 
-
-
+    
 
 //------------ nav drawer
     const [state, setState] = React.useState(false);
@@ -110,13 +117,7 @@ const Navigation = () => {
     );
 //------------ nav drawer end
 
-{/* <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#0099ff" fill-opacity="1" d="M0,288L120,250.7C240,213,480,139,720,144C960,149,1200,235,1320,277.3L1440,320L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path></svg>
 
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#0099ff" fill-opacity="1" d="M0,192L120,170.7C240,149,480,107,720,122.7C960,139,1200,213,1320,250.7L1440,288L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path></svg>
-
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#0099ff" fill-opacity="1" d="M0,160L60,170.7C120,181,240,203,360,186.7C480,171,600,117,720,117.3C840,117,960,171,1080,192C1200,213,1320,203,1380,197.3L1440,192L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>
-
-*/}
 
     return (
         <div className="nav-container nav-inner">
@@ -180,6 +181,28 @@ const Navigation = () => {
                     </div>
                 {/* mav drawer end*/}
             </Box>
+
+            <Box className={bannerTitle}>
+                
+                <Typography variant="p" component="div" sx={{ fontWeight: 'bold' }}>
+                    We Provide
+                </Typography>
+                <Typography variant="h3" component="div" sx={{ fontWeight: 'bold', marginBottom: '20px' }}>
+                    Best Care & <br /> Better Doctor
+                </Typography>
+
+                
+                <Link className={navItem} style={{ textDecoration: 'none' }} to="/appoinment">
+                    <Button color="success" variant="contained">Book Appoinment</Button>
+                </Link>
+                
+
+
+
+            </Box>
+
+
+
 
 
         </div>
