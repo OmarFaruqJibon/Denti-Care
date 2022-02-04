@@ -13,22 +13,23 @@ const AppoinmentUI = () => {
                 <Grid item xs={12} md={6}>
                     <img 
                     style={{width: 350, marginTop: '-105px', marginBottom:'-31px'}}
-                    src={'https://i.postimg.cc/hPgFDZd8/clinic-physician-health-care-hospital-medicine-doctors-and-nurses-36159187319a83019fba0f9df56575b4.png'} alt="" />
+                    src={'https://i.postimg.cc/nLmZzQ2Z/bgh.png'} alt="" />
                 </Grid>
-                <Grid item xs={12} md={6}>
+                <Grid item xs={12} md={6} sx={{mt:6}}>
                     <Typography style={{color: 'white'}} mt={2} variant="body1">
                         APPOINMENT
                     </Typography>
                     <Typography style={{color: 'white', fontWeight: 600}} mt={2} variant="h4">
                         Make an Appoinment today
                     </Typography>
-                    <Typography style={{color: 'white'}} mt={2} variant="p" component="p">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio quidem beatae ex officia quibusdam quia?
+                    <Typography style={{color: 'white'}} mt={2} variant="body2">
+                    Applicants requesting emergency appointments for the purpose of biometric collection must provide proof of emergency..
                     </Typography>
                     <Link style={{ textDecoration: 'none' }} to="/appoinment">
-                        <Button sx={{mt:4}} variant="contained">Book Appoinment</Button>
+                        <Button sx={{mt:4}} variant="contained" color="success">Book Appointment</Button>
                     </Link>
                 </Grid>
+                
             </Grid>
          </Box>
     );
