@@ -33,7 +33,7 @@ const Footer = () => {
                         <Grid item xs={12} md={3}>
                             <Link style={{ textDecoration: 'none'}} to="/home">
                                 <Typography sx={{color:'#bc74a5'}} variant="h4" color="text.secondary">
-                                <strong className={dentiClr}>Denti</strong>Care
+                                    <strong className={dentiClr}>Dent</strong>Care
                                 </Typography>
                             </Link>
 

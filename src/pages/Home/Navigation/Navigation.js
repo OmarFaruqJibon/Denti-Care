@@ -58,8 +58,8 @@ const Navigation = () => {
         },
         bannerTitle:{
             position: 'absolute',
-            top: '43%',
-            left: '10%',
+            top: '38%',
+            left: '8%',
             lineHeight: '30px',
 
         }
@@ -184,11 +184,14 @@ const Navigation = () => {
 
             <Box className={bannerTitle}>
                 
-                <Typography variant="p" component="div" sx={{ fontWeight: 'bold' }}>
-                    We Provide
+                <Typography variant="caption" component="div">
+                    Best Care and Better Doctor
                 </Typography>
-                <Typography variant="h3" component="div" sx={{ fontWeight: 'bold', marginBottom: '20px' }}>
-                    Best Care & <br /> Better Doctor
+                <Typography variant="h2" component="div" sx={{ fontWeight: 'bold', marginBottom: '20px' }}>
+                Time to Smile!  <br />
+                </Typography>
+                <Typography variant="body2" component="div" sx={{ marginBottom: '20px' }}>
+                    Enjoy our new dental offers and travel destinations,they’re online immediately. <br />  Choose your service or destination and start smiling again!
                 </Typography>
 
                 

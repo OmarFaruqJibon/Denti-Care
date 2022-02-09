@@ -14,9 +14,8 @@ import TableContainer from '@mui/material/TableContainer';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import { makeStyles } from '@mui/styles';
-import AlarmIcon from '@mui/icons-material/Alarm';
-import IconButton from '@mui/material/IconButton';
 import { Link } from 'react-router-dom';
+import vectorImg from '../../images/new/animate.svg';
 
 
 const Contact = () => {
@@ -35,39 +34,41 @@ const Contact = () => {
             background: 'white !important',
             border: 'none',
             padding: '4px 11px !important'
-            
+        },
+        dentiClr:{
+            color: '#bc74a5'
         },
     });
-    const {tableBg, tdClr, bookBtn} = useStyle();
+    const {tableBg, tdClr, bookBtn,dentiClr} = useStyle();
 
 
 
     return (
         <Box>
             <Box className="App">
-                <Typography style={{color: '#115278', fontWeight: 'bold'}} mt={2} variant="h4">
-                    Contact DentiCare
+                <Typography style={{color: '#115278' , fontWeight: 'bold'}} mt={2} variant="h4">
+                    Contact Dent<strong className={dentiClr}>Care</strong>
                 </Typography>
                 <Typography sx={{mt:3}}  variant="body2">
-                Globally incubate standards compliant channels before scalable benefits. Quickly <br />
-                 disseminate superior deliverables whereas web-enabled applications.
+                Globally incubate standards compliant channels before scalable benefits. Quickly
+                 disseminate  <br /> superior deliverables whereas web-enabled applications.
                 </Typography>
             </Box>
 
             <Box>
                 <Container>
-                <Grid my={5}  container spacing={2}>
+                <Grid my={8}  container spacing={2}>
                     <Grid  item xs={6} md={3}>
                         <Card sx={{ maxWidth: 345, boxShadow: 0, textAlign: 'center' }}>
                             <CardActionArea >
                                 <CardMedia
                                     component="img"
                                     style={{width: 'auto', height: '80px', margin: '0 auto'}}
-                                    image={'https://i.postimg.cc/W3mPjdgk/emergency-call.png'}
+                                    image={'https://i.postimg.cc/cLh2FWmp/emergency-call.png'}
                                     alt="green iguana"
                                 />
                                 <CardContent>
-                                    <Typography gutterBottom variant="h5" color="#011c7e" component="div">
+                                    <Typography gutterBottom variant="h5" color="#00145E" component="div">
                                         Emergency Call
                                     </Typography>
                                     <Typography variant="body2" color="text.secondary">
@@ -85,11 +86,11 @@ const Contact = () => {
                                 <CardMedia
                                     component="img"
                                     style={{width: 'auto', height: '80px', margin: '0 auto'}}
-                                    image={'https://i.postimg.cc/DwDhck78/address.png'}
+                                    image={'https://i.postimg.cc/T31FNS4h/address.png'}
                                     alt="green iguana"
                                 />
                                 <CardContent>
-                                    <Typography gutterBottom variant="h5" color= "#011c7e" component="div">
+                                    <Typography gutterBottom variant="h5" color= "#00145E" component="div">
                                     Address
                                     </Typography>
                                     <Typography variant="body2" color="text.secondary">
@@ -107,11 +108,11 @@ const Contact = () => {
                                 <CardMedia
                                     component="img"
                                     style={{width: 'auto', height: '80px', margin: '0 auto'}}
-                                    image={'https://i.postimg.cc/yNZHQQNn/clinic.png'}
+                                    image={'https://i.postimg.cc/BQqdHt5T/online-booking.png'}
                                     alt="green iguana"
                                 />
                                 <CardContent>
-                                    <Typography gutterBottom variant="h5" color="#011c7e" component="div">
+                                    <Typography gutterBottom variant="h5" color="#00145E" component="div">
                                     Book By Phone
                                     </Typography>
                                     <Typography variant="body2" color="text.secondary">
@@ -129,11 +130,11 @@ const Contact = () => {
                                 <CardMedia
                                     component="img"
                                     style={{width: 'auto', height: '80px', margin: '0 auto'}}
-                                    image={'https://i.postimg.cc/hjRqHLzn/email.png'}
+                                    image={'https://i.postimg.cc/jdZBXKvG/email.png'}
                                     alt="green iguana"
                                 />
                                 <CardContent>
-                                    <Typography gutterBottom variant="h5" color="#011c7e" component="div">
+                                    <Typography gutterBottom variant="h5" color="#00145E" component="div">
                                     Email Address
                                     </Typography>
                                     <Typography variant="body2" color="text.secondary">
@@ -153,13 +154,25 @@ const Contact = () => {
 
 
 
-        <Container sx={{ mb:8 }}>
+        <Container sx={{ mb:8, mt:8 }}>
 
                 <Grid container spacing={2}>
-                    <Grid  item xs={12} md={6}>
-                        <TableContainer component={Paper}>
+                    <Grid item xs={12} md={12}>
+                        <TableContainer className="App" component={Paper}>
                             <Table className={tableBg} sx={{ Width: 650 }} aria-label="simple table">
+
+                            <Box  sx={{p:2, mb:3 }}>
+                                <Typography  sx={{ color: 'white', paddingBottom:1, fontWeight: 'bold' }} variant="h4">
+                                    Our Working Hours
+                                </Typography>
+                                <Typography  sx={{ color: 'white'}} variant="caption">
+                                    Check out our Office hours to plan your visit
+                                </Typography>
+                                
+                            </Box>
+
                                 <TableBody>
+                                    
                                     <TableRow
                                         sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                                         >
@@ -246,10 +259,10 @@ const Contact = () => {
             
                     </Grid>
 
-                    <Grid  item xs={12} md={6}>
-                        
-                    </Grid>
-                 </Grid>
+                    {/* <Grid className="App" item xs={12} md={6}>
+                        <img width={'80%'} src='https://i.postimg.cc/mg20McVt/physician-fotolia-doctor-of-medicine-doctors-and-nurses-2ea3c554d5036df69ac2cbf6e1b3bc3a.png' alt="" />
+                    </Grid> */}
+                </Grid>
 
 
 
