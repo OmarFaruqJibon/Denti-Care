@@ -9,8 +9,8 @@ const AppoinmentHeader = ({date,setDate}) => {
     return (
         
         <Container sx={{my:8}}>
-            <Typography  sx={{ color: 'success.main', mb:8}} variant="h4">
-                Please Pick An Appoinment
+            <Typography  sx={{ color: 'success.main', mb:8, fontWeight: 'bold'}} variant="h5">
+                Please pick a date and book an appointment
             </Typography>
             <Grid container spacing={2}>
                 <Grid item xs={12} md={6}>
@@ -18,8 +18,8 @@ const AppoinmentHeader = ({date,setDate}) => {
                 </Grid>
                 <Grid item xs={12} md={6}>
                     <img 
-                    style={{width: 600}}
-                    src={bg} alt=""/>
+                    style={{width: 450}}
+                    src={'https://i.postimg.cc/bJT160Xb/young-female-patient-visiting-dentist-office-496169-930.jpg'} alt=""/>
                 </Grid>
             </Grid>
         </Container>

@@ -13,19 +13,22 @@ const Booking = ({booking, date}) => {
         <>
         <Grid className="App" item xs={12} md={6} lg={4}>
                 <Paper sx={{py:3}} elevation={3}>
-                <Typography sx={{ color: 'info.main', fontWeight:600}} variant="h5" gutterBottom component="div">
-                    {name}
-                </Typography>
-                <Typography variant="subtitle2" gutterBottom component="div">
-                    {time}
-                </Typography>
-                <Typography sx={{ color: 'text.secondary' }} variant="caption" gutterBottom component="div">
-                    {space} SPACE AVELABLE
-                </Typography>
-                <Typography sx={{ color: 'warning.main', fontWeight:600 }} variant="h6" gutterBottom component="div">
-                   $ {price}
-                </Typography>
-                <Button  onClick={handleOpen} variant="contained" sx={{ mt:3 }}>BOOK APPOINMENT</Button>
+                    <Typography sx={{ color: 'info.main', fontWeight:600}} variant="h5" gutterBottom component="div">
+                        {name}
+                    </Typography>
+                    <Typography variant="subtitle2" gutterBottom component="div">
+                        {time}
+                    </Typography>
+                    <Typography sx={{ color: 'text.secondary' }} variant="caption" gutterBottom component="div">
+                        {space} SPACE AVELABLE
+                    </Typography>
+                    <Typography sx={{ color: 'warning.main', fontWeight:600 }} variant="h6" gutterBottom component="div">
+                    $ {price}
+                    </Typography>
+                    <Button 
+                        style={{borderTopLeftRadius: '50px', borderTopRightRadius: '50px'}}
+                        onClick={handleOpen} variant="contained" sx={{ mt:3 }}>Book Appointment
+                    </Button>
                 </Paper>
 
             </Grid>

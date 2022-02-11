@@ -6,44 +6,44 @@ import Booking from '../Booking/Booking';
 const bookings = [
     {
         id: 1,
-        name: 'Teeth Orthodonics',
-        time: '08.00 AM - 09.00 AM',
-        space: 10,
-        price: 115
+        name: 'Bridgework',
+        time: '08.00 AM - 11.00 AM',
+        space: 25,
+        price: 310
     },
     {
         id: 2,
-        name: 'Cosmetic Dentistry',
-        time: '09.00 AM - 10.00 AM',
-        space: 8,
+        name: 'Dental Crowns',
+        time: '09.00 AM - 11.99 AM',
+        space: 18,
         price: 325
     },
     {
         id: 3,
-        name: 'Teeth Cleaning',
-        time: '10.00 AM - 11.00 AM',
-        space: 9,
-        price: 215
+        name: 'Cavity Protection',
+        time: '9.00 AM - 11.00 AM',
+        space: 12,
+        price: 415
     },
     {
         id: 4,
-        name: 'Cavity Protection',
-        time: '11.00 AM - 12.00 PM',
-        space: 5,
-        price: 715
+        name: 'Teeth Surgery',
+        time: '9.00 AM - 12.00 PM',
+        space: 15,
+        price: 415
     },
     {
         id: 5,
-        name: 'Pediatric Dental',
-        time: '06.00 PM - 07.00 PM',
-        space: 10,
+        name: 'Teeth Cleaning',
+        time: '04.00 PM - 08.00 PM',
+        space: 20,
         price: 410
     },
     {
         id: 6,
-        name: 'Oral Surgery',
-        time: '07.00 PM - 08.00 PM',
-        space: 10,
+        name: 'Root Canal',
+        time: '07.00 PM - 09.00 PM',
+        space: 12,
         price: 520
     },
 ]
@@ -51,11 +51,13 @@ const bookings = [
 const AppoinmentPackges = ({date}) => {
     return (
         <div>
-            <Typography  className="App" sx={{ color: 'success.main', mb:8}} variant="h4" gutterBottom component="div">
-                Avelable appoinments on - <span style={{ color: '#0288d1'}}>{date.toDateString()}</span>
-            </Typography>
+            
 
-        <Container>
+        <Container sx={{mb:8}}>
+            <Typography  sx={{ color: 'success.main', mb:8, fontWeight: 'bold'}} variant="h5" gutterBottom  component="div">
+                    Avelable appointments on - <span style={{ color: '#0288d1', fontWeight: '400'}}>{date.toDateString()}</span>
+                </Typography>
+
             <Grid container spacing={2}>
                 {
                     bookings.map(booking => <Booking

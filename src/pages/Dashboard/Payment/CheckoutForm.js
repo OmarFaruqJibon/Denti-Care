@@ -1,4 +1,4 @@
-import { CircularProgress } from '@mui/material';
+import { Box, Button, CircularProgress } from '@mui/material';
 import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js';
 import React, { useEffect, useState } from 'react';
 
@@ -92,7 +92,7 @@ const CheckoutForm = ({appoinment}) => {
 
 
     return (
-        <div className="App">
+        <Box sx={{mt:4}} className="App">
             <form onSubmit={handleSubmit}>
                 <CardElement
                     options={{
@@ -111,9 +111,9 @@ const CheckoutForm = ({appoinment}) => {
                     }}
                 />
                 { processing ? <CircularProgress/> :
-                  <button type="submit" disabled={!stripe || success}>
-                    Pay ${price}
-                </button>}
+                  <Button sx={{mt:4}} variant="outlined" type="submit" disabled={!stripe || success}>
+                    Confirm
+                </Button>}
             </form>
             {
                 error && <p style={{color: 'red', textAlign:'left'}}>{error}</p>
@@ -121,7 +121,7 @@ const CheckoutForm = ({appoinment}) => {
             {
                 success && <p style={{color: 'green', textAlign:'left'}}>{success}</p>
             }
-        </div>
+        </Box>
     );
 };
 
