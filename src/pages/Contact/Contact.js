@@ -63,12 +63,12 @@ const Contact = () => {
                             <CardActionArea >
                                 <CardMedia
                                     component="img"
-                                    style={{width: 'auto', height: '80px', margin: '0 auto'}}
+                                    style={{width: '65px', margin: '0 auto'}}
                                     image={'https://i.postimg.cc/cLh2FWmp/emergency-call.png'}
                                     alt="green iguana"
                                 />
                                 <CardContent>
-                                    <Typography gutterBottom variant="h5" color="#00145E" component="div">
+                                    <Typography gutterBottom sx={{fontWeight: 'bolder' }} variant="subtitle1" color="#00145E" component="div">
                                         Emergency Call
                                     </Typography>
                                     <Typography variant="body2" color="text.secondary">
@@ -85,12 +85,12 @@ const Contact = () => {
                             <CardActionArea>
                                 <CardMedia
                                     component="img"
-                                    style={{width: 'auto', height: '80px', margin: '0 auto'}}
+                                    style={{width: '65px', margin: '0 auto'}}
                                     image={'https://i.postimg.cc/T31FNS4h/address.png'}
                                     alt="green iguana"
                                 />
                                 <CardContent>
-                                    <Typography gutterBottom variant="h5" color= "#00145E" component="div">
+                                <Typography gutterBottom sx={{fontWeight: 'bolder' }} variant="subtitle1" color="#00145E" component="div">
                                     Address
                                     </Typography>
                                     <Typography variant="body2" color="text.secondary">
@@ -107,12 +107,12 @@ const Contact = () => {
                             <CardActionArea>
                                 <CardMedia
                                     component="img"
-                                    style={{width: 'auto', height: '80px', margin: '0 auto'}}
+                                    style={{width: '65px', margin: '0 auto'}}
                                     image={'https://i.postimg.cc/BQqdHt5T/online-booking.png'}
                                     alt="green iguana"
                                 />
                                 <CardContent>
-                                    <Typography gutterBottom variant="h5" color="#00145E" component="div">
+                                    <Typography gutterBottom sx={{fontWeight: 'bolder' }} variant="subtitle1" color="#00145E" component="div">
                                     Book By Phone
                                     </Typography>
                                     <Typography variant="body2" color="text.secondary">
@@ -129,12 +129,12 @@ const Contact = () => {
                             <CardActionArea>
                                 <CardMedia
                                     component="img"
-                                    style={{width: 'auto', height: '80px', margin: '0 auto'}}
+                                    style={{width: '65px', margin: '0 auto'}}
                                     image={'https://i.postimg.cc/jdZBXKvG/email.png'}
                                     alt="green iguana"
                                 />
                                 <CardContent>
-                                    <Typography gutterBottom variant="h5" color="#00145E" component="div">
+                                <Typography gutterBottom sx={{fontWeight: 'bolder' }} variant="subtitle1" color="#00145E" component="div">
                                     Email Address
                                     </Typography>
                                     <Typography variant="body2" color="text.secondary">

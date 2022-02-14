@@ -37,7 +37,7 @@ const Team = () => {
 
                 <Container>
                     <Typography sx={{ fontWeight: 400, mb: 1}} variant="h6" component="div">
-                        DentiCare
+                        DentCare
                     </Typography>
                     <Typography  className={titleColor} sx={{ fontWeight: 600, mb: 3}} variant="h4" component="div">
                         Specialized Team

@@ -15,7 +15,7 @@ import List from '@mui/material/List';
 import Divider from '@mui/material/Divider';
 import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
-
+import dentLogo from '../../../images/dent2.png';
 
 const SecondNav = () => {
     const theme = useTheme();
@@ -112,10 +112,10 @@ const SecondNav = () => {
                             <MenuIcon />
                         </IconButton>
 
-                        <Typography className={navLogo} variant="h5" component="div" sx={{ flexGrow: 1, fontWeight:600 }}>
+                        <Typography className={navLogo} variant="h5" component="div" sx={{ flexGrow: 1, fontWeight:600, my:1 }}>
                             
                             <Link style={{ textDecoration: 'none'}} to="/home">
-                                <img style={{height:'100px'}} src={'https://i.postimg.cc/Njwmk18d/denticare-logo-inv-1.png'} alt="" />
+                                <img style={{height:'50px'}} src={dentLogo} alt="" />
                             </Link>
                         </Typography>
 
