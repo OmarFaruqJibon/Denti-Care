@@ -121,7 +121,7 @@ const SecondNav = () => {
 
                         <div className={navItems}>
                             <Link className={navItem} style={{ textDecoration: 'none' }} to="/appoinment">
-                                <Button sx={{color:'white'}}>Book Appoinment</Button>
+                                <Button sx={{color:'white'}}>Appointment</Button>
                             </Link>
                             <Link style={{ textDecoration: 'none' }} to="/dashboard">
                                     <Button sx={{ml:1,color:'white'}}>Dashboard</Button>

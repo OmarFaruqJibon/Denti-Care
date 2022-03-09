@@ -20,24 +20,7 @@ const Home = () => {
             <AppoinmentUI></AppoinmentUI>
             <Contact></Contact>
 
-
-
-
-
-
-
             <Footer></Footer>
-
-
-
-
-
-
-
-
-
-
-
 
             {/*pest clr:  #1fa386  #129A7C*/}
 

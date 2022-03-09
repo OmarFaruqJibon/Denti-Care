@@ -72,7 +72,7 @@ const Contact = () => {
                                         Emergency Call
                                     </Typography>
                                     <Typography variant="body2" color="text.secondary">
-                                        415-205-5550 <br />
+                                        515-233-4510 <br />
                                         Call us Anytime 24/7
                                     </Typography>
                                 </CardContent>
@@ -94,8 +94,8 @@ const Contact = () => {
                                     Address
                                     </Typography>
                                     <Typography variant="body2" color="text.secondary">
-                                    500 Linden Ave, South San Francisco, <br />
-                                     CA 94080, United States 
+                                        250 Sifitn Ave, North San Francisco, <br />
+                                        DK 45080, United States 
                                     </Typography>
                                 </CardContent>
                             </CardActionArea>
@@ -116,8 +116,8 @@ const Contact = () => {
                                     Book By Phone
                                     </Typography>
                                     <Typography variant="body2" color="text.secondary">
-                                    415-205-5550 <br />
-                                     405-222-5551
+                                        515-233-4510 <br />
+                                        515-233-4510
                                     </Typography>
                                 </CardContent>
                             </CardActionArea>
@@ -138,8 +138,8 @@ const Contact = () => {
                                     Email Address
                                     </Typography>
                                     <Typography variant="body2" color="text.secondary">
-                                    office@denticare.com <br />
-                                     emergencies@denticare.com
+                                        contact@dentcare.com <br />
+                                        contact@dentcare.com
                                     </Typography>
                                 </CardContent>
                             </CardActionArea>

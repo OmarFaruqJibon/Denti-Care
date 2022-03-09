@@ -88,11 +88,11 @@ const Navigation = () => {
                     <Link className={mobileNav} to="/dashboard">Dashboard</Link>
                 </ListItemText>
                 <Divider />
-
+{/* 
                 <ListItemText className={mobileNavList}>
                     <Link className={mobileNav} to="/about">About</Link> 
                 </ListItemText>
-                <Divider />
+                <Divider /> */}
 
                 <ListItemText className={mobileNavList}>
                     <Link className={mobileNav} to="/contact">Contact</Link>
@@ -146,14 +146,14 @@ const Navigation = () => {
 
                         <div className={navItems}>
                             <Link className={navItem} style={{ textDecoration: 'none' }} to="/appoinment">
-                                <Button sx={{color:'white'}}>Book Appoinment</Button>
+                                <Button sx={{color:'white'}}>Appointment</Button>
                             </Link>
                             <Link style={{ textDecoration: 'none' }} to="/dashboard">
                                     <Button sx={{ml:1,color:'white'}}>Dashboard</Button>
                             </Link>
-                            <Link style={{ textDecoration: 'none' }} to="/about">
+                            {/* <Link style={{ textDecoration: 'none' }} to="/about">
                                     <Button sx={{ml:1,color:'white'}}>About</Button>
-                            </Link>
+                            </Link> */}
                             <Link style={{ textDecoration: 'none' }} to="/contact">
                                     <Button sx={{ml:1,color:'white'}}>Contact</Button>
                             </Link>
@@ -197,7 +197,7 @@ const Navigation = () => {
 
                 
                 <Link className={navItem} style={{ textDecoration: 'none' }} to="/appoinment">
-                    <Button color="success" variant="contained">Book Appoinment</Button>
+                    <Button color="success" variant="contained">Book Appointment</Button>
                 </Link>
                 
 

@@ -26,10 +26,13 @@ const Team = () => {
                     transform: 'scale(1.1, 1.1)',
                     transition: 'all 0.5s ease-in-out',
              },
+        },
+        dentiClr:{
+            color: '#bc74a5'
         }
     });
 
-    const {socialIcon, titleColor,teamCard} = useStyle();
+    const {socialIcon, titleColor,teamCard,dentiClr} = useStyle();
 
 
     return (
@@ -37,7 +40,7 @@ const Team = () => {
 
                 <Container>
                     <Typography sx={{ fontWeight: 400, mb: 1}} variant="h6" component="div">
-                        DentCare
+                        Dent<strong className={dentiClr}>Care</strong>
                     </Typography>
                     <Typography  className={titleColor} sx={{ fontWeight: 600, mb: 3}} variant="h4" component="div">
                         Specialized Team

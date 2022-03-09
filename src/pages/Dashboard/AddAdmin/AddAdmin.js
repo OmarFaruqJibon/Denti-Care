@@ -28,9 +28,9 @@ const AddAdmin = () => {
     }
     return (
         <div>
-            <h2>Add admin page</h2>
-            <form onSubmit={handleAdminForm}>
-                <TextField onBlur={handleOnBlur} label="email" name="email" type="email" variant="standard" /> <br/>
+            <h2  style={{textAlign: 'center', marginBottom: '50px'}}>Create an admin role</h2>
+            <form style={{textAlign: 'center',}} onSubmit={handleAdminForm}>
+                <TextField style={{marginBottom: '20px', width: '50%'}} onBlur={handleOnBlur} label="Enter your email address" name="email" type="email" variant="standard" /> <br/>
                 <Button variant="contained" type="submit">Make Admin</Button>
             </form>
         </div>

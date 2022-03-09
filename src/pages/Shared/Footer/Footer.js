@@ -78,7 +78,7 @@ const Footer = () => {
                                 </Typography>
 
                                 <Box className={socialFont}> 
-                                    <i style={{color: 'white', backgroundColor: '#0e54ae', borderRadius: '50%', padding: '9px',marginRight: '10px'}} className="socialFont fab fa-facebook-f"></i>
+                                    <i style={{color: 'white', backgroundColor: '#0e54ae', borderRadius: '50%', padding: '9px 12px',marginRight: '10px'}} className="socialFont fab fa-facebook-f"></i>
                                     <i style={{color: 'white',  backgroundColor: '#0e54ae', borderRadius: '50%', padding: '9px',marginRight: '10px'}} className="socialFont fab fa-linkedin-in"></i>
                                     <i style={{color: 'white',  backgroundColor: '#0e54ae', borderRadius: '50%', padding: '9px',marginRight: '10px'}} className="socialFont fab fa-twitter"></i>
                                     <i style={{color: 'white',  backgroundColor: '#0e54ae', borderRadius: '50%', padding: '9px',marginRight: '10px'}} className="socialFont fab fa-youtube"></i>
@@ -94,7 +94,7 @@ const Footer = () => {
 
             <Box>
             <Typography className={footerBottom} sx={{color:"white", textAlign:'center'}} variant="body1" component="div">
-                Copyright 2022 by DentiCare. All rights reserved.
+                Copyright 2022 by DentCare. All rights reserved.
             </Typography>
             </Box>
 

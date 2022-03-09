@@ -15,12 +15,10 @@ const AppoinmentUI = () => {
                     style={{width: 350, marginTop: '-105px', marginBottom:'-31px'}}
                     src={'https://i.postimg.cc/nLmZzQ2Z/bgh.png'} alt="" />
                 </Grid>
-                <Grid item xs={12} md={6} sx={{mt:6}}>
-                    <Typography style={{color: 'white'}} mt={2} variant="body1">
-                        APPOINMENT
-                    </Typography>
-                    <Typography style={{color: 'white', fontWeight: 600}} mt={2} variant="h4">
-                        Make an Appoinment today
+                <Grid item xs={12} md={6} sx={{mt:8}}>
+                    
+                    <Typography style={{color: 'white', fontWeight: 600}} mt={5} variant="h4">
+                        Make an Appointment today
                     </Typography>
                     <Typography style={{color: 'white'}} mt={2} variant="body2">
                     Applicants requesting emergency appointments for the purpose of biometric collection must provide proof of emergency..
