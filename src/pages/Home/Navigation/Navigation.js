@@ -137,10 +137,10 @@ const Navigation = () => {
                             <MenuIcon />
                         </IconButton>
 
-                        <Typography className={navLogo} variant="h5" component="div" sx={{ flexGrow: 1, fontWeight:600 ,  mt:1}}>
+                        <Typography className={navLogo} variant="h5" component="div" sx={{ flexGrow: 1, fontWeight:600 ,  mt:2}}>
                             
                             <Link style={{ textDecoration: 'none'}} to="/home">
-                                <img style={{height:'60px'}} src={dentLogo} alt="" />
+                                <img style={{height:'55px'}} src={dentLogo} alt="" />
                             </Link>
                         </Typography>
 
@@ -200,14 +200,7 @@ const Navigation = () => {
                     <Button color="success" variant="contained">Book Appointment</Button>
                 </Link>
                 
-
-
-
             </Box>
-
-
-
-
 
         </div>
     );
