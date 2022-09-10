@@ -43,14 +43,14 @@ const BookingModal = ({open,handleClose,booking,date}) => {
             date: date.toLocaleDateString()
         }
         console.log(appoinment)
-        fetch('http://localhost:5000/appoinments',{
+        fetch('https://vast-springs-50012.herokuapp.com/appoinments',{
             method: "POST",
             headers:{'content-type':'application/json'},
             body: JSON.stringify(appoinment)
         })
         .then(res=>res.json())
         .then(data=>{
-            // console.log(data);
+            console.log(data);
             if(data.insertedId){
                 alert('Booking successfully');
             }

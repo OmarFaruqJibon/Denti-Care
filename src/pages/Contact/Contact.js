@@ -15,7 +15,7 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import { makeStyles } from '@mui/styles';
 import { Link } from 'react-router-dom';
-import vectorImg from '../../images/new/animate.svg';
+// import vectorImg from '../../images/new/animate.svg';
 
 
 const Contact = () => {

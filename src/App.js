@@ -7,7 +7,7 @@ import {
 import Home from "./pages/Home/Home/Home";
 import Appoinment from "./pages/Appoinment/Appoinment/Appoinment";
 import Login from "./pages/Login/Login/Login";
-import Navigation from "./pages/Home/Navigation/Navigation";
+// import Navigation from "./pages/Home/Navigation/Navigation";
 import Register from "./pages/Login/Register/Register";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import AuthProvider from "./pages/context/AuthProvider/AuthProvider";
