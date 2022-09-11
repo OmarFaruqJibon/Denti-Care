@@ -54,9 +54,9 @@ const AppoinmentPackges = ({date}) => {
             
 
         <Container sx={{mb:8}}>
-            <Typography  sx={{ color: 'success.main', mb:8, fontWeight: 'bold'}} variant="h5" gutterBottom  component="div">
+            <Typography  sx={{ color: 'success.main', mb:8, fontWeight: 'bold', textDecoration: 'line'}} variant="h5" gutterBottom  component="div">
                     Avelable appointments on - <span style={{ color: '#0288d1', fontWeight: '400'}}>{date.toDateString()}</span>
-                </Typography>
+            </Typography>
 
             <Grid container spacing={2}>
                 {

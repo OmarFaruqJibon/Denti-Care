@@ -1,7 +1,6 @@
 import React from 'react';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
-// import bg from '../../../images/appointment-bg.png';
 import Calender from '../../Shared/Calender/Calender';
 import { Typography } from '@mui/material';
 
