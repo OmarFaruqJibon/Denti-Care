@@ -8,8 +8,11 @@ import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
-
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
 import { makeStyles } from '@mui/styles';
+
+AOS.init();
 
 const Team = () => {
     const useStyle = makeStyles({
@@ -36,7 +39,7 @@ const Team = () => {
 
 
     return (
-        <Box className="App" sx={{ flexGrow: 1, marginTop: '90px' }}>
+        <Box data-aos="zoom-in-up"  data-aos-duration="1000" data-aos-delay="200" className="App" sx={{ flexGrow: 1, marginTop: '90px' }}>
 
                 <Container>
                     <Typography sx={{ fontWeight: 400, mb: 1}} variant="h6" component="div">
@@ -52,7 +55,7 @@ const Team = () => {
 
 
 
-                    <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
+                    <Grid data-aos="zoom-in-up" container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
                         <Grid item xs={12} sm={6} md={3}>
                             <Card className={teamCard} sx={{ maxWidth: 345, margin: '0 auto' }}>
                                 <CardMedia

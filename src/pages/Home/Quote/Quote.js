@@ -2,6 +2,9 @@ import { Typography, Grid, TextField } from '@mui/material';
 import { Box } from '@mui/system';
 import { makeStyles } from '@mui/styles';
 import React from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
+AOS.init();
 
 const Quote = () => {
     const useStyle = makeStyles({
@@ -42,7 +45,7 @@ const Quote = () => {
     const {quoteBg,quoteBody,quoteMail,quoteBtn,quoteInputField} = useStyle();
 
     return (
-        <Box className={quoteBg} sx={{ flexGrow: 1 , p: 4}}>
+        <Box data-aos="fade-up-right"  data-aos-duration="1000" data-aos-delay="200" className={quoteBg} sx={{ flexGrow: 1 , p: 4}}>
             
             <Grid container spacing={2}>
                 <Grid style={{textAlign: 'center'}} item xs={12} md={6}>

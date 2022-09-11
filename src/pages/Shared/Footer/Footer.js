@@ -3,6 +3,9 @@ import { Typography, Grid } from '@mui/material';
 import { Box } from '@mui/system';
 import { makeStyles } from '@mui/styles';
 import { Link } from 'react-router-dom';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
+AOS.init();
 
 const Footer = () => {
 
@@ -26,7 +29,7 @@ const Footer = () => {
     
     return (
         <>
-            <Box className={footerBg} sx={{ flexGrow: 1 , p: 4}}>
+            <Box data-aos="fade-in" className={footerBg} sx={{ flexGrow: 1 , p: 4}}>
                 <Box>
                     <Grid container spacing={2}>
 

@@ -6,12 +6,16 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import { CardActionArea } from '@mui/material';
 import './KidsCare.css';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
+
+AOS.init();
 
 const KidsCare = () => {
     return (
         <Box sx={{ flexGrow: 1 , p: 5}}>
             <Grid my={8}  container spacing={2}>
-                <Grid className="kidsCareWrapper" item xs={12} md={6}>
+                <Grid data-aos="fade-up"  data-aos-delay="200"  data-aos-duration="1000" className="kidsCareWrapper" item xs={12} md={6}>
                    <Box>
                    <Box>
                         <Typography style={{color: '#115278', fontWeight: 'bold'}} mt={2} variant="h4">
@@ -93,7 +97,7 @@ const KidsCare = () => {
                     </Box>
                    </Box>
                 </Grid>
-                <Grid style={{textAlign: 'center'}} item xs={12} md={6}>
+                <Grid data-aos="fade-up"  data-aos-duration="1000" data-aos-delay="200" style={{textAlign: 'center'}} item xs={12} md={6}>
                     <img  style={{width: '80%'}} src={'https://i.postimg.cc/pdWcV9TL/kid.png'} alt="" />
                 </Grid>
             </Grid>

@@ -5,10 +5,13 @@ import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import { Button } from '@mui/material';
 import { Link } from 'react-router-dom';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
+AOS.init();
 
 const AppoinmentUI = () => {
     return (
-        <Box className="appoinmentBg" sx={{ flexGrow: 1 , p: 3}}>
+        <Box data-aos="fade-up" data-aos-duration="1500" className="appoinmentBg" sx={{ flexGrow: 1 , p: 3}}>
             <Grid container spacing={2}>
                 <Grid item xs={12} md={6}>
                     <img 

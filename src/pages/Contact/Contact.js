@@ -15,8 +15,10 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import { makeStyles } from '@mui/styles';
 import { Link } from 'react-router-dom';
-// import vectorImg from '../../images/new/animate.svg';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
 
+AOS.init();
 
 const Contact = () => {
 
@@ -44,7 +46,7 @@ const Contact = () => {
 
 
     return (
-        <Box>
+        <Box data-aos="fade-up" data-aos-duration="1500">
             <Box className="App">
                 <Typography style={{color: '#115278' , fontWeight: 'bold'}} mt={2} variant="h4">
                     Contact Dent<strong className={dentiClr}>Care</strong>

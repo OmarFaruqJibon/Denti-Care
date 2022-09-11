@@ -2,8 +2,9 @@ import React from 'react';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import { Container } from '@mui/material';
-import Typography from '@mui/material/Typography';
 import Service from './../Service/Service';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
 
 const services = [
     {
@@ -21,11 +22,13 @@ const services = [
         description: 'Dental surgery is any of a number of medical procedures that involve artificially modifying dentition; in other words',
         img: 'https://i.postimg.cc/rF7XvZnC/dental-care.png'
     }
-]
+];
+
+AOS.init();
 
 const Services = () => {
     return (
-            <Box className="App" sx={{ flexGrow: 1, mt:8 }}>
+            <Box data-aos="fade-right"  data-aos-duration="1000"  data-aos-delay="200" className="App" sx={{ flexGrow: 1, mt:8 }}>
                 <Container>
                    
                     <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
