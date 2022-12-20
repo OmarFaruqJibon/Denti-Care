@@ -12,7 +12,7 @@ const Payment = () => {
     const {appoinmentId} = useParams();
 
     useEffect( () => {
-        fetch(`https://vast-springs-50012.herokuapp.com/appoinments/${appoinmentId}`)
+        fetch(`https://dent-care-server.onrender.com/appoinments/${appoinmentId}`)
         .then(res => res.json())
         .then(data => setAppoinment(data))
     },[]);

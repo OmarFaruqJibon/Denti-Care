@@ -17,7 +17,7 @@ const DashboardAppoinment = ({ date }) => {
     const {user} = useAuth();
     const [appoinments, setAppoinments] = useState([]);
     useEffect(()=>{
-        const url = `https://vast-springs-50012.herokuapp.com/appoinments?email=${user.email}&date=${date.toLocaleDateString()}`;
+        const url = `https://dent-care-server.onrender.com/appoinments?email=${user.email}&date=${date.toLocaleDateString()}`;
         fetch(url)
         .then(res=>res.json())
         .then(data=>setAppoinments(data));

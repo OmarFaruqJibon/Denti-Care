@@ -12,7 +12,7 @@ const AddAdmin = () => {
     }
     const handleAdminForm = e =>{
         const user = {email};
-        fetch('https://vast-springs-50012.herokuapp.com/users/admin',{
+        fetch('https://dent-care-server.onrender.com/users/admin',{
             method: 'PUT',
             headers: {
                 'authorization' : `Bearer ${token}`,
