@@ -32,12 +32,12 @@ const Register = () => {
         <Container>
             <Grid container spacing={2}>
                 <Grid className="App" sx={{mt:8}} item xs={12} md={6}>
-                    <Typography sx={{fontWeight: "bold"}} variant="h5">Register</Typography>
+                    <Typography sx={{fontWeight: "bold"}} variant="h4">Welcome</Typography>
                     <form onSubmit={handleForm}>
 
                         <TextField 
                         sx={{mt:3}}
-                        style={{width:"100%"}}
+                        style={{width:"70%"}}
                         id="standard-basic"
                         name="name"
                         onBlur={handleLogInField} 
@@ -46,7 +46,7 @@ const Register = () => {
                         <br/>
                         <TextField 
                         sx={{mt:3}}
-                        style={{width:"100%"}}
+                        style={{width:"70%"}}
                         id="standard-basic"
                         name="email"
                         type="email"
@@ -57,7 +57,7 @@ const Register = () => {
 
                         <TextField 
                         sx={{mt:3}}
-                        style={{width:"100%"}}
+                        style={{width:"70%"}}
                         id="standard-basic" 
                         name="password"
                         onBlur={handleLogInField} 
@@ -68,7 +68,7 @@ const Register = () => {
 
                         <TextField 
                         sx={{mt:3}}
-                        style={{width:"100%"}}
+                        style={{width:"70%"}}
                         id="standard-basic" 
                         name="password2"
                         onBlur={handleLogInField} 
@@ -76,11 +76,24 @@ const Register = () => {
                         type="password"
                         variant="standard" />
 
-                        <Button type="submit" sx={{mt:3}} style={{width:"100%"}} variant="contained">Register</Button>
+                        <Button type="submit" sx={{mt:3}} style={{width:"70%"}} variant="contained">Register</Button>
                     </form>
-                    <Link to="/login" style={{textDecoration: "none"}}>
+
+
+                    {/* <Link to="/login" style={{textDecoration: "none"}}>
                         <Typography sx={{ mt:1}} variant="body1">Already user? Please Login</Typography>
-                    </Link>
+                    </Link> */}
+
+
+                    <Typography sx={{ mt:2}} variant="body1">
+                        Already have an account?  
+                            <Link to="/login" style={{color: "rgb(25 118 210)" ,textDecoration: "none", marginLeft: "10px"}}>
+                                 Log in    
+                            </Link>
+                        </Typography>
+
+
+
                     <br />
                     
                     {

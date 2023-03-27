@@ -32,12 +32,12 @@ const Login = () => {
             {isLoading && <CircularProgress/>}
             <Grid container spacing={2}>
                 {!isLoading && <Grid sx={{mt:8}} item xs={12} md={6}>
-                    <Typography sx={{fontWeight: "bold"}} variant="h5">Login</Typography>
+                    <Typography sx={{fontWeight: "bold"}} variant="h4">Welcome</Typography>
                     <form onSubmit={handleForm}>
 
                         <TextField 
                         sx={{mt:3}}
-                        style={{width:"100%"}}
+                        style={{width:"70%"}}
                         id="standard-basic"
                         name="email"
                         type="email"
@@ -48,7 +48,7 @@ const Login = () => {
 
                         <TextField 
                         sx={{mt:3}}
-                        style={{width:"100%"}}
+                        style={{width:"70%"}}
                         id="standard-basic" 
                         name="password"
                         onBlur={handleLogInField} 
@@ -56,19 +56,44 @@ const Login = () => {
                         type="password"
                         variant="standard" />
 
-                        <Button type="submit" sx={{mt:3}} style={{width:"100%"}} variant="contained">Login</Button>
+                        <Button type="submit" sx={{mt:3}} style={{width:"70%"}} variant="contained">Login</Button>
                     </form>
+{/* 
                     <Link to="/register" style={{textDecoration: "none"}}>
-                        <Typography sx={{ mt:1}} variant="body1">New user? Please Register</Typography>
-                    </Link>
-                    <Typography sx={{ mt:1}} variant="body1">-------------OR-------------</Typography>
-                    <Button onClick={handleGoogleLogin} sx={{mt:3}} style={{width:"100%"}} variant="contained">
-                        {/* <img 
+                        
+                        <Typography sx={{ mt:1}} variant="body1">
+                            Don't have an account? <span>Register</span>   
+                        
+                        </Typography>
+                    </Link> */}
+
+                    
+
+                        <Typography sx={{ mt:2}} variant="body1">
+                            Don't have an account?  
+                            <Link to="/register" style={{color: "rgb(25 118 210)" ,textDecoration: "none", marginLeft: "10px"}}>
+                                Register   
+                            </Link>
+                        </Typography>
+                    
+                    
+
+
+                    <Typography sx={{ mt:3}} variant="body1"> <span style={{color: "rgb(163 163 163)"}}>--------------------------------------- </span> OR <span style={{color: "rgb(163 163 163)"}}>--------------------------------------- </span></Typography>
+                   
+                   
+                    <Button onClick={handleGoogleLogin} sx={{mt:4}} style={{width:"70%", textTransform: "none"}} variant="outlined">
+
+                        <img 
                         className="googleIcon"
                         width="25px"
-                        src={'https://i.postimg.cc/gcMqbTF7/google.png'} alt="" />  */}
+                        src={'https://i.postimg.cc/gcMqbTF7/google.png'} alt="" 
+                        style={{marginRight: " 10px"}}/> 
+
                         Login with Google
+                        
                     </Button>
+
 
                     {
                         user.email && <Alert severity="success">Login Succesfully!</Alert>
