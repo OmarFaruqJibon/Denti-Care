@@ -12,7 +12,7 @@ const AddAdmin = () => {
     }
     const handleAdminForm = e =>{
         const user = {email};
-        fetch('https://dent-care-server.onrender.com/users/admin',{
+        fetch('http://localhost:5000/users/admin',{
             method: 'PUT',
             headers: {
                 'authorization' : `Bearer ${token}`,

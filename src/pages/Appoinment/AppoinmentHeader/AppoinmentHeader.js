@@ -8,7 +8,7 @@ const AppoinmentHeader = ({date,setDate}) => {
     return (
         
         <Container sx={{my:8}}>
-            <Typography  sx={{ color: 'success.main', mb:8, fontWeight: 'bold'}} variant="h5">
+            <Typography  sx={{ color: 'success.main', mb:8, fontWeight: 'bold'}} variant="p">
                 Please pick a date and book an appointment
             </Typography>
             <Grid container spacing={2}>

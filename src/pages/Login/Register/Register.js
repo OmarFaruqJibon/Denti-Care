@@ -1,7 +1,7 @@
 import { Alert, Button, Container, Grid, TextField, Typography } from '@mui/material';
 import React, { useState } from 'react';
 import { Link , useHistory} from 'react-router-dom';
-import loginImg from '../../../images/login.png';
+// import loginImg from '../../../images/login.png';
 import useAuth from '../../hooks/useAuth';
 
 const Register = () => {
@@ -17,13 +17,13 @@ const Register = () => {
         newLoginData[field] = value;
         setLoginData(newLoginData);
     }
-    // console.log(loginData)
+    console.log(loginData)
     const handleForm = e => {
         if(loginData.password !== loginData.password2){
             alert("Password did not match!");
             return
         }
-        regiserUser(loginData.email, loginData.password, loginData.name, history);
+        regiserUser(loginData.email, loginData.password, loginData.name, loginData.phone, history);
         e.preventDefault();
     }
 
@@ -52,6 +52,17 @@ const Register = () => {
                         type="email"
                         onBlur={handleLogInField} 
                         label="Email" 
+                        variant="standard" />
+                        <br/>
+
+                        <TextField 
+                        sx={{mt:3}}
+                        style={{width:"70%"}}
+                        id="standard-basic"
+                        name="phone"
+                        type="number"
+                        onBlur={handleLogInField} 
+                        label="Phone" 
                         variant="standard" />
                         <br/>
 

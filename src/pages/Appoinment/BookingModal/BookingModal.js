@@ -42,15 +42,15 @@ const BookingModal = ({open,handleClose,booking,date}) => {
             price: booking.price,
             date: date.toLocaleDateString()
         }
-        console.log(appoinment)
-        fetch('https://dent-care-server.onrender.com/appoinments',{
+        // console.log(appoinment)
+        fetch('http://localhost:5000/appoinments',{
             method: "POST",
             headers:{'content-type':'application/json'},
             body: JSON.stringify(appoinment)
         })
         .then(res=>res.json())
         .then(data=>{
-            console.log(data);
+            // console.log(data);
             if(data.insertedId){
                 alert('Booking successfully');
             }

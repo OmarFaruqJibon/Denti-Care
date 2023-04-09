@@ -7,6 +7,7 @@ import Quote from '../Quote/Quote';
 import Contact from '../../Contact/Contact';
 import Team from '../Team/Team';
 import Footer from '../../Shared/Footer/Footer';
+import Review from '../Review/Review';
 
 const Home = () => {
     return (
@@ -18,6 +19,7 @@ const Home = () => {
             <Quote></Quote>
             <Team></Team>
             <AppoinmentUI></AppoinmentUI>
+            <Review/>
             <Contact></Contact>
 
             <Footer></Footer>

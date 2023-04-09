@@ -17,6 +17,7 @@ import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
 import dentLogo from '../../../images/dent2.png';
 
+
 const SecondNav = () => {
     const theme = useTheme();
     const {user, logOut} = useAuth();
@@ -120,9 +121,12 @@ const SecondNav = () => {
                         </Typography>
 
                         <div className={navItems}>
-                            <Link className={navItem} style={{ textDecoration: 'none' }} to="/appoinment">
-                                <Button sx={{color:'white'}}>Appointment</Button>
+                            <Link className={navItem} style={{ textDecoration: 'none' }} to="/home">
+                                <Button sx={{color:'white'}}>Home</Button>
                             </Link>
+                            {/* <Link className={navItem} style={{ textDecoration: 'none' }} to="/appoinment">
+                                <Button sx={{color:'white'}}>Appointment</Button>
+                            </Link> */}
                             <Link style={{ textDecoration: 'none' }} to="/dashboard">
                                     <Button sx={{ml:1,color:'white'}}>Dashboard</Button>
                             </Link>

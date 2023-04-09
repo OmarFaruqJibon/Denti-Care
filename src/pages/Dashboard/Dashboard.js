@@ -25,6 +25,15 @@ import DashboardHome from './DashboardHome/DashboardHome';
 import AddAdmin from './AddAdmin/AddAdmin';
 import useAuth from '../hooks/useAuth';
 import Payment from './Payment/Payment';
+import SecondNav from '../Home/Navigation/SecondNav';
+import './Dashboard.css';
+import Profile from './Profile/Profile';
+import TestReports from './TestRepoarts/TestReports';
+import CreateReview from './CreateReview/CreateReview';
+import ManageReviews from './ManageReviews/ManageReviews';
+
+
+
 const drawerWidth = 240;
 
 function Dashboard(props) {
@@ -59,19 +68,55 @@ function Dashboard(props) {
     
       <List>
           <ListItem className={sideMinuList}>
+
               <ListItemIcon>
-                <Link className={sideMinuItem}  to='/'> <Button color="inherit">Home</Button> </Link>
+              <Link className={sideMinuItem}  to="/dashboard/profile"> <Button color="inherit">Profile</Button> </Link>
               </ListItemIcon>
               <Divider />
+
+
+              {/* <ListItemIcon>
+                <Link className={sideMinuItem}  to='/'> <Button color="inherit">Home</Button> </Link>
+              </ListItemIcon>
+              <Divider /> */}
+              
+              <ListItemIcon>
+                <Link className={sideMinuItem}  to='/dashboard'> <Button color="inherit">Dashboard</Button> </Link>
+              </ListItemIcon>
+              <Divider />
+
               <ListItemIcon>
               <Link className={sideMinuItem}  to="/appoinment"> <Button color="inherit">Appoinment</Button> </Link>
               </ListItemIcon>
               <Divider />
+
+              <ListItemIcon>
+              <Link className={sideMinuItem}  to="/dashboard/reports"> <Button color="inherit">Test Reports</Button> </Link>
+              </ListItemIcon>
+              <Divider />
+
+            
+              <ListItemIcon>
+              {! admin && 
+                <Link className={sideMinuItem}  to={`${url}/reviews`}> <Button color="inherit">Give Review</Button> </Link>}
+              </ListItemIcon>
+              <Divider />
+
               <ListItemIcon>
               {admin && 
                 <Link className={sideMinuItem}  to={`${url}/addAdmin`}> <Button color="inherit">Add Admin</Button> </Link>}
               </ListItemIcon>
               <Divider />
+
+              <ListItemIcon>
+              {admin && 
+                <Link className={sideMinuItem}  to={`${url}/manageReview`}> <Button color="inherit">Manage Review</Button> </Link>}
+              </ListItemIcon>
+              <Divider />
+
+
+
+
           <ListItemText/>
           </ListItem>
       </List>
@@ -81,9 +126,18 @@ function Dashboard(props) {
   const container = window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box sx={{ display: 'flex' }}>
+    <> 
+
+    <div className="sideNavMenu">
+        <SecondNav></SecondNav>
+    </div>
+      
+    
+
+    <Box className='dashboardHome' sx={{ display: 'flex'}}>
       <CssBaseline />
-      <AppBar
+
+      {/* <AppBar
         position="fixed"
         sx={{
           width: { sm: `calc(100% - ${drawerWidth}px)` },
@@ -104,10 +158,12 @@ function Dashboard(props) {
             Dashboard
           </Typography>
         </Toolbar>
-      </AppBar>
+      </AppBar> */}
+      
       <Box
         component="nav"
         sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}
+        
         aria-label="mailbox folders"
       >
         <Drawer
@@ -140,22 +196,44 @@ function Dashboard(props) {
         component="main"
         sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` } }}
       >
-        <Toolbar />
+      <Toolbar />
 
-        <Switch>
-        <Route exact path={path}>
-          <DashboardHome></DashboardHome>
-        </Route>
-        <Route path={`${path}/addAdmin`}>
-          <AddAdmin></AddAdmin>
-        </Route>
-        <Route path={`${path}/payment/:appoinmentId`}>
-          <Payment></Payment>
-        </Route>
-      </Switch>
+
+
+        
+        <Switch>  {/* Dashboard routes */}
+          <Route exact path={path}>
+            <DashboardHome></DashboardHome>
+          </Route>
+
+          <Route path={`${path}/addAdmin`}>
+            <AddAdmin></AddAdmin>
+          </Route>
+
+          <Route path={`${path}/profile`}>
+            <Profile></Profile>
+          </Route>
+
+          <Route path={`${path}/reports`}>
+            <TestReports></TestReports>
+          </Route>
+
+          <Route path={`${path}/reviews`}>
+            <CreateReview/>
+          </Route>
+
+          <Route path={`${path}/manageReview`}>
+            <ManageReviews/>
+          </Route>
+
+          <Route path={`${path}/payment/:appoinmentId`}>
+            <Payment></Payment>
+          </Route>
+        </Switch>
 
       </Box>
     </Box>
+    </>
   );
 }
 

@@ -14,20 +14,23 @@ const useFirebase = () => {
     const auth = getAuth();
     const googleProvider = new GoogleAuthProvider();
     
-    const regiserUser = (email,password, name, history)=>{
+    const regiserUser = (email, password, name, phone, history)=>{
         setIsLoading(true);
+
         createUserWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
 
-            const newUser = {email, displayName: name};
+            const newUser = {email, displayName: name, phone};
             setUser(newUser);
+
             updateProfile(auth.currentUser, {
-                displayName: name
+                displayName: name,
+                phone: phone
               }).then(() => {
               }).catch((error) => {
               });
 
-              saveUser(email, name, 'POST');
+              saveUser(email, name, phone, 'POST');
 
             setAuthError('');
             history.push('/');
@@ -37,6 +40,7 @@ const useFirebase = () => {
         })
         .finally(()=>setIsLoading(false));
     };
+
     // console.log(user);
 
     const userLogin = (email, password, location, history) => {
@@ -63,7 +67,7 @@ const useFirebase = () => {
             const destination = location?.state?.from || '/';
             history.replace(destination);
             setAuthError('');
-            saveUser(user.email, user.displayName, 'PUT');
+            saveUser( user.email, user.displayName, 'PUT');
         }).catch((error) => {
             setAuthError(error.message);
         })
@@ -89,7 +93,7 @@ const useFirebase = () => {
 
 
       useEffect(() => {
-        fetch(`https://dent-care-server.onrender.com/users/${user.email}`)
+        fetch(`http://localhost:5000/users/${user.email}`)
         .then(res=>res.json())
         .then(data=>setAdmin(data.admin))
       },[user.email]);
@@ -105,9 +109,9 @@ const useFirebase = () => {
           .finally(()=>setIsLoading(false));
     }
 
-    const saveUser = (email, displayName, method) => {
-        const user = {email, displayName};
-        fetch('https://dent-care-server.onrender.com/users',{
+    const saveUser = (email, displayName, phone, method) => {
+        const user = {email, displayName, phone};
+        fetch('http://localhost:5000/users',{
             method: method,
             headers:{'content-type' : 'application/json'},
             body: JSON.stringify(user)

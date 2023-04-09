@@ -46,6 +46,13 @@ const bookings = [
         space: 12,
         price: 520
     },
+    {
+        id: 6,
+        name: 'Root Canal',
+        time: '07.00 PM - 09.00 PM',
+        space: 12,
+        price: 520
+    },
 ]
 
 const AppoinmentPackges = ({date}) => {
@@ -54,8 +61,8 @@ const AppoinmentPackges = ({date}) => {
             
 
         <Container sx={{mb:8}}>
-            <Typography  sx={{ color: 'success.main', mb:8, fontWeight: 'bold', textDecoration: 'line'}} variant="h5" gutterBottom  component="div">
-                    Avelable appointments on - <span style={{ color: '#0288d1', fontWeight: '400'}}>{date.toDateString()}</span>
+            <Typography  sx={{ color: 'success.main', mb:8, fontWeight: 'bold', textDecoration: 'line'}} variant="p" gutterBottom  component="div">
+                    Avelable appointments on - <span style={{ color: '#0288d1', fontWeight: '600'}}>{date.toDateString()}</span>
             </Typography>
 
             <Grid container spacing={2}>

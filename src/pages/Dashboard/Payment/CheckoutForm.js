@@ -13,7 +13,7 @@ const CheckoutForm = ({appoinment}) => {
     const elements = useElements();
 
     useEffect( () =>{
-        fetch('https://dent-care-server.onrender.com/create-payment-intent',{
+        fetch('http://localhost:5000/create-payment-intent',{
           method: 'POST',
           headers: {'content-type' : 'application/json'},
           body: JSON.stringify({price})
@@ -76,7 +76,7 @@ const CheckoutForm = ({appoinment}) => {
         last4: paymentMethod.card.last4,
         transaction: paymentIntent.client_secret.slice('_secret')[0]
     }
-    const url = `https://dent-care-server.onrender.com/appointments/${_id}`;
+    const url = `http://localhost:5000/appointments/${_id}`;
     fetch(url, {
         method: 'PUT',
         headers: {
