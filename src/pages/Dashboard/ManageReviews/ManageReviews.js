@@ -33,7 +33,7 @@ const ManageReviews = () => {
             })
             .then(res=>res.json())
             .then(data=>{
-                alert('DELETED SUCCESSFULLY');
+                alert('Review Deleted Successfully.');
                 const remainingCars = reviews.filter(user => user._id !== id);
                 setReviews(remainingCars);
             })
@@ -66,7 +66,7 @@ const ManageReviews = () => {
                     <TableBody>
                         {reviews.map((row) => (
                             <TableRow
-                                key={row.name}
+                                key={row._id}
                                 sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                                 >
                                 <TableCell component="th" scope="row">

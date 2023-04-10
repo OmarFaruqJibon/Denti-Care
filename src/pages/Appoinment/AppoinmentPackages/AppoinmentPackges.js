@@ -47,7 +47,7 @@ const bookings = [
         price: 520
     },
     {
-        id: 6,
+        id: 7,
         name: 'Root Canal',
         time: '07.00 PM - 09.00 PM',
         space: 12,
