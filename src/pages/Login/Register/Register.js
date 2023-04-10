@@ -113,6 +113,7 @@ const Register = () => {
 
                     {
                         authError && <Alert severity="error">{authError}</Alert>
+                        
                     }
 
 

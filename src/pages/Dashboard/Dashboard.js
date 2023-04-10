@@ -31,6 +31,7 @@ import Profile from './Profile/Profile';
 import TestReports from './TestRepoarts/TestReports';
 import CreateReview from './CreateReview/CreateReview';
 import ManageReviews from './ManageReviews/ManageReviews';
+import SendReports from './SendReports/SendReports';
 
 
 
@@ -91,10 +92,16 @@ function Dashboard(props) {
               <Divider />
 
               <ListItemIcon>
-              <Link className={sideMinuItem}  to="/dashboard/reports"> <Button color="inherit">Test Reports</Button> </Link>
+              {!admin && 
+                <Link className={sideMinuItem}  to={`${url}/reports`}> <Button color="inherit">Test Reports</Button> </Link>}
               </ListItemIcon>
               <Divider />
 
+              <ListItemIcon>
+              {admin && 
+                <Link className={sideMinuItem}  to={`${url}/sendReports`}> <Button color="inherit">Send Reports</Button> </Link>}
+              </ListItemIcon>
+              <Divider />
             
               <ListItemIcon>
               {! admin && 
@@ -104,15 +111,16 @@ function Dashboard(props) {
 
               <ListItemIcon>
               {admin && 
-                <Link className={sideMinuItem}  to={`${url}/addAdmin`}> <Button color="inherit">Add Admin</Button> </Link>}
+                <Link className={sideMinuItem}  to={`${url}/manageReview`}> <Button color="inherit">Manage Review</Button> </Link>}
               </ListItemIcon>
               <Divider />
 
               <ListItemIcon>
               {admin && 
-                <Link className={sideMinuItem}  to={`${url}/manageReview`}> <Button color="inherit">Manage Review</Button> </Link>}
+                <Link className={sideMinuItem}  to={`${url}/addAdmin`}> <Button color="inherit">Add Admin</Button> </Link>}
               </ListItemIcon>
               <Divider />
+
 
 
 
@@ -214,6 +222,10 @@ function Dashboard(props) {
 
           <Route path={`${path}/reports`}>
             <TestReports></TestReports>
+          </Route>
+
+          <Route path={`${path}/sendReports`}>
+            <SendReports/>
           </Route>
 
           <Route path={`${path}/reviews`}>
