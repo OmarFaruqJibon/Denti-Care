@@ -32,7 +32,6 @@ const Profile = () => {
 
             {users.map((thisUser) => thisUser.email === initialInfo.email && ( 
                         <div>
-                        <p>ID: {thisUser._id}</p>
                         <p>Name: {thisUser.displayName}</p>
                         <p>Email: {thisUser.email}</p>
                         <p>Phone: {thisUser.phone}</p>

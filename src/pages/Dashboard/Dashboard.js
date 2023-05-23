@@ -149,7 +149,7 @@ function Dashboard(props) {
               <Divider />
 
               <ListItemIcon>
-              {<Link className={sideMinuItem}  to={`${url}/bloodDonation`}> <Button color="inherit">Blood Donation</Button> </Link>}
+              {<Link className={sideMinuItem}  to={`${url}/bloodDonation`}> <Button color="inherit">Blood Donors</Button> </Link>}
               </ListItemIcon>
               <Divider />
 

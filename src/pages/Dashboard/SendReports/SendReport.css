@@ -7,18 +7,14 @@
     width: 60%;
     padding: 10px;
     padding-top: 30px;
-    /* background-color: rgb(92, 92, 92); */
     color: white;
     margin-top: 10px;
 };
-
-
-
-
-.input-form button{
-    background-color: blue;
-    color: white;
-    padding: 10px 17 px;
-    margin-top: 30px;
+.input-form input:last-child{
+    margin-bottom: 50px;
 };
+
+.submit-btn{
+    margin-top: 50px;
+}
 

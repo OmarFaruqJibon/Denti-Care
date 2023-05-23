@@ -43,7 +43,7 @@ const BloodDonation = () => {
     return (
             <div>
 
-            <h2 className='App mb-5'>This is blood donation page</h2>
+            <h2 className='App mb-5'>Blood Donors</h2>
 
              <TableContainer component={Paper}>
                 <Table sx={{ minWidth: 650 }} aria-label="simple table">

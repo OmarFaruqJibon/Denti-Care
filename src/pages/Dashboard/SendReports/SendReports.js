@@ -20,7 +20,7 @@ const SendReports = () => {
         .then(res=>res.json())
         .then(result=>{
             if(result?.insertedId){
-                alert('Review  Succesfully.');
+                alert('Report Send Succesfully.');
                 reset();
             }
         });
@@ -30,17 +30,21 @@ const SendReports = () => {
 
     return (
         <div className='send-report-container'>
-            <h1>Send test reports to users</h1>
+            <h2>Send Test Reports to User</h2>
 
             <form className="input-form" onSubmit={handleSubmit(onSubmit)}>
                     
                     <input {...register("name")} placeholder="Name"/>
                     <br />
 
-                    {/* <input {...register("img" , { required: true })} placeholder="Image Url" className="p-2 m-3 w-50"/> */}
-                    {/* <br /> */}
 
                     <input {...register("email" , { required: true })} placeholder="Email"/>
+                    <br />
+
+                    <input {...register("service" , { required: true })} placeholder="Service Name"/>
+                    <br />
+
+                    <input type="date"  {...register("date" , { required: true })} placeholder="Treatment On"/>
                     <br />
 
                     <input {...register("report" , { required: true })} placeholder="Report"/>
@@ -48,9 +52,8 @@ const SendReports = () => {
 
                     {errors.exampleRequired && <span>This field is required</span>}
                     
-                    {/* <input className="submit-btn" type="submit" value="Submit"/> */}
 
-                    <Button type='submit'>Submit</Button>
+                    <Button className='submit-btn' variant="contained" type='submit'>Submit</Button>
                     
             </form>
 
