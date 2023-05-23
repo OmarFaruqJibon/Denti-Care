@@ -40,13 +40,6 @@ const BloodDonation = () => {
             }
     }
 
-
-
-
-
-
-
-
     return (
             <div>
 

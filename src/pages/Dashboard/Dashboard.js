@@ -34,6 +34,7 @@ import ManageReviews from './ManageReviews/ManageReviews';
 import SendReports from './SendReports/SendReports';
 import BloodDonation from './BloodDonation/BloodDonation';
 import AddDonor from './AddDonor/AddDonor';
+import AmbulanceService from './AmbulanceService/AmbulanceService';
 
 
 
@@ -140,8 +141,12 @@ function Dashboard(props) {
               <Divider />
 
               <ListItemIcon>
-              {
-                <Link className={sideMinuItem}  to={`${url}/bloodDonation`}> <Button color="inherit">Blood Donation</Button> </Link>}
+              {<Link className={sideMinuItem}  to={`${url}/bloodDonation`}> <Button color="inherit">Blood Donation</Button> </Link>}
+              </ListItemIcon>
+              <Divider />
+
+              <ListItemIcon>
+              {<Link className={sideMinuItem}  to={`${url}/ambulanceService`}> <Button color="inherit">Ambulance Service</Button> </Link>}
               </ListItemIcon>
               <Divider />
 
@@ -270,6 +275,10 @@ function Dashboard(props) {
 
           <Route path={`${path}/donor`}>
             <AddDonor/>
+          </Route>
+
+          <Route path={`${path}/ambulanceService`}>
+            <AmbulanceService/>
           </Route>
 
 

@@ -14,7 +14,7 @@ const services = [
     },
     {
         name: 'Whitening',
-        description: 'Teeth whitening is not permanent It can lasts up to 3 years – it varies from person to person. The whitening effect last as long if you smoke or drink red',
+        description: 'Teeth whitening is not permanent It can lasts up to 3 years, it varies from person to person. The whitening effect last as long if you smoke or drink red',
         img: 'https://i.postimg.cc/WbdcYcn1/tooth-filling_(2).png'
     },
     {
