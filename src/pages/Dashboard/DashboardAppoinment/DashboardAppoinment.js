@@ -17,12 +17,13 @@ const DashboardAppoinment = ({ date }) => {
     const {user} = useAuth();
     const [appoinments, setAppoinments] = useState([]);
     useEffect(()=>{
-        const url = `http://localhost:5000/appoinments?email=${user.email}&date=${date.toLocaleDateString()}`;
+        const url = `http://localhost:5000/appoinments/find?email=${user.email}&date=${date.toLocaleDateString()}`;
         fetch(url)
         .then(res=>res.json())
         .then(data=>setAppoinments(data));
     },[date, user.email]);
     // console.log(appoinments);
+    
     
     return (
         <div>

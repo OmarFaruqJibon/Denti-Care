@@ -35,6 +35,7 @@ import SendReports from './SendReports/SendReports';
 import BloodDonation from './BloodDonation/BloodDonation';
 import AddDonor from './AddDonor/AddDonor';
 import AmbulanceService from './AmbulanceService/AmbulanceService';
+import AllAppointments from './AllAppointments/AllAppointments';
 
 
 
@@ -118,6 +119,13 @@ function Dashboard(props) {
               <ListItemIcon>
               {admin && 
                 <Link className={sideMinuItem}  to={`${url}/manageReview`}> <Button color="inherit">Manage Review</Button> </Link>}
+              </ListItemIcon>
+              <Divider />
+
+
+              <ListItemIcon>
+              {admin && 
+                <Link className={sideMinuItem}  to={`${url}/appoinments`}> <Button color="inherit">All Appointments</Button> </Link>}
               </ListItemIcon>
               <Divider />
 
@@ -279,6 +287,10 @@ function Dashboard(props) {
 
           <Route path={`${path}/ambulanceService`}>
             <AmbulanceService/>
+          </Route>
+
+          <Route path={`${path}/appoinments`}>
+            <AllAppointments/>
           </Route>
 
 
