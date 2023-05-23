@@ -9,6 +9,7 @@ const useFirebase = () => {
     const [authError, setAuthError] = useState('');
     const [isLoading, setIsLoading] = useState(true);
     const [admin, setAdmin] = useState(false);
+    const [doctor, setDoctor] = useState(true);
     const [token, setToken] = useState('');
 
     const auth = getAuth();
@@ -92,11 +93,35 @@ const useFirebase = () => {
       }, []);
 
 
+
+
+
+
+// admin role
       useEffect(() => {
-        fetch(`http://localhost:5000/users/${user.email}`)
+        fetch(`http://localhost:5000/users/admin/${user.email}`)
         .then(res=>res.json())
-        .then(data=>setAdmin(data.admin))
+        .then(data=>{setAdmin(data.admin)
+            console.log(data)})
       },[user.email]);
+
+
+// doctor role
+      useEffect(() => {
+        fetch(`http://localhost:5000/users/doctor/${user.email}`)
+        .then(res=>res.json())
+        .then(data=>{setDoctor(data.doctor)
+            console.log(data.doctor)})
+
+        
+      },[user.email]);
+
+
+
+
+
+
+
 
 
     const logOut = () => {
@@ -110,13 +135,16 @@ const useFirebase = () => {
     }
 
     const saveUser = (email, displayName, phone, method) => {
+
         const user = {email, displayName, phone};
+
         fetch('http://localhost:5000/users',{
             method: method,
             headers:{'content-type' : 'application/json'},
             body: JSON.stringify(user)
         })
-    }
+
+    };
 
     return {
         user,
@@ -127,6 +155,7 @@ const useFirebase = () => {
         googleLogin,
         isLoading,
         admin,
+        doctor,
         token
     }
 };

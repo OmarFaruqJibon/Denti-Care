@@ -12,6 +12,7 @@ import 'aos/dist/aos.css';
 AOS.init();
 
 const KidsCare = () => {
+    
     return (
         <Box sx={{ flexGrow: 1 , p: 5}}>
             <Grid my={8}  container spacing={2}>

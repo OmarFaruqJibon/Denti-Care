@@ -32,6 +32,8 @@ import TestReports from './TestRepoarts/TestReports';
 import CreateReview from './CreateReview/CreateReview';
 import ManageReviews from './ManageReviews/ManageReviews';
 import SendReports from './SendReports/SendReports';
+import BloodDonation from './BloodDonation/BloodDonation';
+import AddDonor from './AddDonor/AddDonor';
 
 
 
@@ -40,6 +42,7 @@ const drawerWidth = 240;
 function Dashboard(props) {
   const { window } = props;
   const {admin} = useAuth();
+  const {doctor} = useAuth();
   const [mobileOpen, setMobileOpen] = React.useState(false);
   let { path, url } = useRouteMatch();
 
@@ -62,6 +65,8 @@ function Dashboard(props) {
       }
   });
   const {sideMinuItem,sideMinuList} = useStyle();
+
+
   const drawer = (
     <div>
       <Toolbar />
@@ -118,6 +123,25 @@ function Dashboard(props) {
               <ListItemIcon>
               {admin && 
                 <Link className={sideMinuItem}  to={`${url}/addAdmin`}> <Button color="inherit">Add Admin</Button> </Link>}
+              </ListItemIcon>
+              <Divider />
+
+
+              <ListItemIcon>
+              {admin && 
+                <Link className={sideMinuItem}  to={`${url}/donor`}> <Button color="inherit">Add Blood Donor</Button> </Link>}
+              </ListItemIcon>
+              <Divider />
+
+              <ListItemIcon>
+              {doctor && 
+                <Link className={sideMinuItem}  to={`${url}/addAdmin`}> <Button color="inherit">Doctors page</Button> </Link>}
+              </ListItemIcon>
+              <Divider />
+
+              <ListItemIcon>
+              {
+                <Link className={sideMinuItem}  to={`${url}/bloodDonation`}> <Button color="inherit">Blood Donation</Button> </Link>}
               </ListItemIcon>
               <Divider />
 
@@ -239,6 +263,36 @@ function Dashboard(props) {
           <Route path={`${path}/payment/:appoinmentId`}>
             <Payment></Payment>
           </Route>
+
+          <Route path={`${path}/bloodDonation`}>
+            <BloodDonation/>
+          </Route>
+
+          <Route path={`${path}/donor`}>
+            <AddDonor/>
+          </Route>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         </Switch>
 
       </Box>

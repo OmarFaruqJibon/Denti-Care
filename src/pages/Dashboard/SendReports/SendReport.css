@@ -3,24 +3,19 @@
 }
 
 
-input{
+.input-form input{
     width: 60%;
     padding: 10px;
     padding-top: 30px;
-    background-color: rgb(92, 92, 92);
+    /* background-color: rgb(92, 92, 92); */
     color: white;
     margin-top: 10px;
 };
 
 
-input{
-    background-color: blue;
-    color: white;
-    padding: 10px 17 px;
-    margin-top: 30px;
-};
 
-button{
+
+.input-form button{
     background-color: blue;
     color: white;
     padding: 10px 17 px;
