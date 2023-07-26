@@ -97,7 +97,7 @@ const Footer = () => {
 
             <Box>
             <Typography className={footerBottom} sx={{color:"white", textAlign:'center'}} variant="body1" component="div">
-                Copyright 2022 by DentCare. All rights reserved.
+                Copyright 2023 by DentCare. All rights reserved.
             </Typography>
             </Box>
 

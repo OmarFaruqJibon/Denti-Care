@@ -7,9 +7,10 @@
     width: 60%;
     padding: 10px;
     padding-top: 30px;
-    color: white;
     margin-top: 10px;
 };
+
+
 .input-form input:last-child{
     margin-bottom: 50px;
 };

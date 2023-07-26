@@ -17,17 +17,16 @@ const CreateReview = () => {
         .then(res=>res.json())
         .then(result=>{
             if(result?.insertedId){
-                alert('Review  Succesfully.');
+                alert('Review Send.');
                 reset();
             }
         });
-        console.log(data);
     }
 
     return (
         <div className="mb">
 
-            <h2 className="mt">Please give us a review</h2>
+            <h2 className="App">Please Give Us A Review</h2>
 
             <form className="input-form" onSubmit={handleSubmit(onSubmit)}>
                 

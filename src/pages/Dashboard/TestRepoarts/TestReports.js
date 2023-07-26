@@ -30,7 +30,7 @@ const TestReports = () => {
 
     return (
         <div>
-            <h1 className='App'>Test report</h1>
+            <h2 className='App'>Test Report</h2>
 
             <TableContainer component={Paper}>
                 <Table aria-label="simple table">

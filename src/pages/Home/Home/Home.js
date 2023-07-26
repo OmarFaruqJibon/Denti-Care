@@ -8,6 +8,7 @@ import Contact from '../../Contact/Contact';
 import Team from '../Team/Team';
 import Footer from '../../Shared/Footer/Footer';
 import Review from '../Review/Review';
+import Blog from '../Blog/Blog';
 
 const Home = () => {
     return (
@@ -21,6 +22,8 @@ const Home = () => {
             <AppoinmentUI></AppoinmentUI>
             <Review/>
             <Contact></Contact>
+
+            <Blog/>
 
             <Footer></Footer>
 

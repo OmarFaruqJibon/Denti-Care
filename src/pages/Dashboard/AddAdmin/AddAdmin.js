@@ -84,20 +84,6 @@ const AddAdmin = () => {
             {success && <Alert severity="success">Admin create Succesfully!</Alert>}
 
 
-            <br />
-            <br />
-
-{/* create a doctor role */}
-
-            <form style={{textAlign: 'center',}} onSubmit={handleDoctorForm}>
-                <TextField style={{marginBottom: '20px', width: '50%'}} onBlur={handleDoctorOnBlur} label="add doctor role" name="email" type="email" variant="standard" /> <br/>
-                <Button variant="contained" type="submit">Make Doctor</Button>
-            </form>
-
-            { success && <Alert severity="success">Doctor create Succesfully!</Alert>}
-
-
-
 
         </div>
     );

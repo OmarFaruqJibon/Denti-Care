@@ -8,6 +8,21 @@
     border-radius: 5px;
     color: black;
     border: none;
+    width: 60%;
+    padding: 10px;
+    padding-top: 30px;
+    margin-top: 10px;
+}
+.input-form textarea{
+    background-color: rgb(231, 231, 231);
+    border-radius: 5px;
+    color: black;
+    border: none;
+    width: 60%;
+    padding: 10px;
+    padding-top: 30px;
+    margin-top: 10px;
+    
 }
 
 .input-form input:last-child{

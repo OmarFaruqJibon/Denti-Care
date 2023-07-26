@@ -36,6 +36,7 @@ import BloodDonation from './BloodDonation/BloodDonation';
 import AddDonor from './AddDonor/AddDonor';
 import AmbulanceService from './AmbulanceService/AmbulanceService';
 import AllAppointments from './AllAppointments/AllAppointments';
+import CreateBlog from './CreateBlog/CreateBlog';
 
 
 
@@ -103,6 +104,12 @@ function Dashboard(props) {
                 <Link className={sideMinuItem}  to={`${url}/reports`}> <Button color="inherit">Test Reports</Button> </Link>}
               </ListItemIcon>
               <Divider />
+{/* 
+              <ListItemIcon>
+              {!doctor && 
+                <Link className={sideMinuItem}  to={`${url}/reports`}> <Button color="inherit">Test Reports</Button> </Link>}
+              </ListItemIcon>
+              <Divider /> */}
 
               <ListItemIcon>
               {admin && 
@@ -115,6 +122,12 @@ function Dashboard(props) {
                 <Link className={sideMinuItem}  to={`${url}/reviews`}> <Button color="inherit">Give Review</Button> </Link>}
               </ListItemIcon>
               <Divider />
+            
+              {/* <ListItemIcon>
+              {! doctor && 
+                <Link className={sideMinuItem}  to={`${url}/reviews`}> <Button color="inherit">Give Review</Button> </Link>}
+              </ListItemIcon>
+              <Divider /> */}
 
               <ListItemIcon>
               {admin && 
@@ -125,6 +138,12 @@ function Dashboard(props) {
 
               <ListItemIcon>
               {admin && 
+                <Link className={sideMinuItem}  to={`${url}/appoinments`}> <Button color="inherit">All Appointments</Button> </Link>}
+              </ListItemIcon>
+              <Divider />
+
+              <ListItemIcon>
+              {doctor && 
                 <Link className={sideMinuItem}  to={`${url}/appoinments`}> <Button color="inherit">All Appointments</Button> </Link>}
               </ListItemIcon>
               <Divider />
@@ -143,10 +162,11 @@ function Dashboard(props) {
               <Divider />
 
               <ListItemIcon>
-              {doctor && 
-                <Link className={sideMinuItem}  to={`${url}/addAdmin`}> <Button color="inherit">Doctors page</Button> </Link>}
+              {admin && 
+                <Link className={sideMinuItem}  to={`${url}/blogs`}> <Button color="inherit">Add Blog</Button> </Link>}
               </ListItemIcon>
               <Divider />
+
 
               <ListItemIcon>
               {<Link className={sideMinuItem}  to={`${url}/bloodDonation`}> <Button color="inherit">Blood Donors</Button> </Link>}
@@ -291,6 +311,10 @@ function Dashboard(props) {
 
           <Route path={`${path}/appoinments`}>
             <AllAppointments/>
+          </Route>
+
+          <Route path={`${path}/blogs`}>
+            <CreateBlog/>
           </Route>
 
 

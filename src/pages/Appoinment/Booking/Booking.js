@@ -8,7 +8,7 @@ const Booking = ({booking, date}) => {
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
 
-    const {name, time, price, space} = booking;
+    const {name, time, price, space, doctor} = booking;
     return (
         <>
         <Grid className="App" item xs={12} md={6} lg={4}>
@@ -24,6 +24,9 @@ const Booking = ({booking, date}) => {
                     </Typography>
                     <Typography sx={{ color: 'warning.main', fontWeight:600 }} variant="h6" gutterBottom component="div">
                     $ {price}
+                    </Typography>
+                    <Typography sx={{ color: 'text.secondary' }} variant="p" gutterBottom component="div">
+                    {doctor}
                     </Typography>
                     <Button 
                         style={{borderTopLeftRadius: '50px', borderTopRightRadius: '50px'}}

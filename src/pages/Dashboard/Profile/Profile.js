@@ -12,7 +12,7 @@ const Profile = () => {
 
 
     const [users, setUsers] = useState([]);
-    const [currentUser, setCurrentUser] = useState([]);
+    // const [currentUser, setCurrentUser] = useState([]);
 
 
     useEffect(()=>{
@@ -22,7 +22,7 @@ const Profile = () => {
         .then(data=>setUsers(data));
     },[]);
 
-    console.log(currentUser);
+    // console.log(currentUser);
 
     return (
         <div className='profile_wrap'>
@@ -32,11 +32,11 @@ const Profile = () => {
 
             {users.map((thisUser) => thisUser.email === initialInfo.email && ( 
                         <div>
-                        <p>Name: {thisUser.displayName}</p>
-                        <p>Email: {thisUser.email}</p>
-                        <p>Phone: {thisUser.phone}</p>
+                        <p> <strong>Name:</strong> {thisUser.displayName}</p>
+                        <p> <strong>Email:</strong> {thisUser.email}</p>
+                        <p> <strong>Phone:</strong> {thisUser.phone}</p>
 
-                        <Link style={{textDecoration: 'none'}} to={`updateProfile/${thisUser._id}`}><Button variant="contained">Update Profile</Button></Link>
+                        {/* <Link style={{textDecoration: 'none'}} to={`updateProfile/${thisUser._id}`}><Button variant="contained">Update Profile</Button></Link> */}
 
                     </div>
                     ))}

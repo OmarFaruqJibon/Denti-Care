@@ -1,4 +1,11 @@
 import React, { useEffect, useState } from 'react';
+import './Blog.css';
+import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react/swiper-react";
 
@@ -7,20 +14,17 @@ import "swiper/swiper.min.css";
 import "swiper/modules/pagination/pagination.min.css";
 
 import { Autoplay, Pagination, Navigation } from "swiper";
-import "./Review.css";
-import Rating from 'react-rating';
-import { Typography } from '@mui/material';
+
+
 import { makeStyles } from '@mui/styles';
 
-
-
-const Review = () => {
+const Blog = () => {
 
     const [userReview, setUserReview] = useState([]);
 
 
     useEffect( () => {
-        fetch('http://localhost:5000/reviews')
+        fetch('http://localhost:5000/blogs')
         .then(res => res.json())
         .then(data => setUserReview(data))
     }, []);
@@ -35,32 +39,21 @@ const Review = () => {
         }
     });
 
-    const {dentiClr, titleColor} = useStyle();
+console.log(userReview);
+const {dentiClr, titleColor} = useStyle();
 
     return (
-        <div className='review-section App'>
+ 
+        <div>
+
+            <div className='blog-section App'>
                                 <Typography sx={{ fontWeight: 400, mb: 1}} variant="h6" component="div">
-                        Dent<strong className={dentiClr}>Care</strong>
+                                Dent<strong className={dentiClr}>Care</strong>
                     </Typography>
                     <Typography  className={titleColor} sx={{ fontWeight: 600, mb: 8}} variant="h4" component="div">
-                        Patients Feedback
+                        Articles
                     </Typography>
-
             <>
-                {/* <Swiper
-                        spaceBetween={30}
-                        centeredSlides={true}
-                        autoplay={{
-                        delay: 2500,
-                        disableOnInteraction: false,
-                        }}
-                        pagination={{
-                        clickable: true,
-                        }}
-                        navigation={true}
-                        modules={[Autoplay, Pagination, Navigation]}
-                        className="mySwiper"
-                    > */}
 
                 <Swiper
                         slidesPerView={1}
@@ -92,43 +85,37 @@ const Review = () => {
 
                 {userReview.map((review) => (
                     <SwiperSlide> 
-                        <div className='review-container'>
-                            <p>{review.message}</p>
-                            <h2>{review.name}</h2>
-                            <Rating className="star-icon"
-                                                initialRating={review.rating}
-                                                readonly
-                                                emptySymbol="far fa-star"
-                                                fullSymbol="fas fa-star"
+                        <div className='blog'>
+                        <Card sx={{ maxWidth: 345 }}>
+                            <CardMedia
+                                sx={{ height: 140 }}
+                                image={review.img}
                             />
+                            <CardContent>
+                                <Typography gutterBottom variant="h5" component="div">
+                                {review.name}
+                                </Typography>
+                                <Typography variant="body2" color="text.secondary">
+                                {review.message}
+                                </Typography>
+                            </CardContent>
+                            <CardActions>
+                                <Button size="small">Share</Button>
+                                <Button size="small">Learn More</Button>
+                            </CardActions>
+                        </Card>
                             
                         </div>
+
                     </SwiperSlide>
                 ))}
-
-
-
-{/* 
-
-                   
-
-
-{/* ------------------------------------------------------------------------------------------------------------------------ */}
-
-
-
-
-
-
-
-
-
-
-
                 </Swiper>
             </>
         </div>
+
+        </div>
+
     );
 };
 
-export default Review;
+export default Blog;
