@@ -7,7 +7,7 @@ const CreateBlog = () => {
 
 
     const onSubmit = data =>{
-        fetch('http://localhost:5000/blogs',{
+        fetch('https://dent-care-server.onrender.com/blogs',{
             method: 'POST',
             headers:{
                 'content-type': 'application/json'

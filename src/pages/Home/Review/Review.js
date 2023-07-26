@@ -20,7 +20,7 @@ const Review = () => {
 
 
     useEffect( () => {
-        fetch('http://localhost:5000/reviews')
+        fetch('https://dent-care-server.onrender.com/reviews')
         .then(res => res.json())
         .then(data => setUserReview(data))
     }, []);
@@ -91,7 +91,7 @@ const Review = () => {
 
 
                 {userReview.map((review) => (
-                    <SwiperSlide> 
+                    <SwiperSlide key={review.name}> 
                         <div className='review-container'>
                             <p>{review.message}</p>
                             <h2>{review.name}</h2>

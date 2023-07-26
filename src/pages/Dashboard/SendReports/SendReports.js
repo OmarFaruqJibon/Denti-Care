@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useForm } from 'react-hook-form';
 import './SendReport.css';
 import { Button } from '@mui/material';
@@ -10,7 +10,7 @@ const SendReports = () => {
 
 
     const onSubmit = data =>{
-        fetch('http://localhost:5000/reports',{
+        fetch('https://dent-care-server.onrender.com/reports',{
             method: 'POST',
             headers:{
                 'content-type': 'application/json'

@@ -99,19 +99,17 @@ const useFirebase = () => {
 
 // admin role
       useEffect(() => {
-        fetch(`http://localhost:5000/users/admin/${user.email}`)
+        fetch(`https://dent-care-server.onrender.com/users/admin/${user.email}`)
         .then(res=>res.json())
-        .then(data=>{setAdmin(data.admin)
-            console.log(data)})
+        .then(data=>{setAdmin(data.admin)})
       },[user.email]);
 
 
 // doctor role
       useEffect(() => {
-        fetch(`http://localhost:5000/users/doctor/${user.email}`)
+        fetch(`https://dent-care-server.onrender.com/users/doctor/${user.email}`)
         .then(res=>res.json())
-        .then(data=>{setDoctor(data.doctor)
-            console.log(data.doctor)})
+        .then(data=>{setDoctor(data.doctor)})
 
         
       },[user.email]);
@@ -138,7 +136,7 @@ const useFirebase = () => {
 
         const user = {email, displayName, phone};
 
-        fetch('http://localhost:5000/users',{
+        fetch('https://dent-care-server.onrender.com/users',{
             method: method,
             headers:{'content-type' : 'application/json'},
             body: JSON.stringify(user)

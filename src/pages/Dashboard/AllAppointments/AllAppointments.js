@@ -16,18 +16,18 @@ const AllAppointments = () => {
 
 
     useEffect( () => {
-        fetch('http://localhost:5000/appoinments')
+        fetch('https://dent-care-server.onrender.com/appoinments')
         .then(res => res.json())
         .then(data=>setappoinments(data));
     },[]);
 
-    console.log(appoinments);
+ 
 
     const handleDeleteBooking = id =>{
         const proceed = window.confirm('Are you sure you want to delete the appointment?');
 
             if(proceed){
-                const url = `http://localhost:5000/appoinments/${id}`;
+                const url = `https://dent-care-server.onrender.com/appoinments/${id}`;
             fetch((url),{
                 method: 'DELETE',
             })

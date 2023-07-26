@@ -2,8 +2,8 @@ import React, { useEffect } from 'react';
 import useAuth from '../../hooks/useAuth';
 import './Profile.css';
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Button } from '@mui/material';
+// import { Link } from 'react-router-dom';
+// import { Button } from '@mui/material';
 
 const Profile = () => {
 
@@ -16,7 +16,7 @@ const Profile = () => {
 
 
     useEffect(()=>{
-        const url = `http://localhost:5000/users`;
+        const url = `https://dent-care-server.onrender.com/users`;
         fetch(url)
         .then(res=>res.json())
         .then(data=>setUsers(data));

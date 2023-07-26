@@ -8,21 +8,21 @@ const AddAdmin = () => {
     const [email, setEmail] = useState('');
     const [success, setSuccess] = useState(false);
 
-    const [doctorEmail, setDoctorEmail] = useState('');
+    // const [doctorEmail, setDoctorEmail] = useState('');
     
 
     const handleOnBlur = e => {
         setEmail(e.target.value);
     }
 
-    const handleDoctorOnBlur = e => {
-        setDoctorEmail(e.target.value);
-    }
+    // const handleDoctorOnBlur = e => {
+    //     setDoctorEmail(e.target.value);
+    // }
 
 
     const handleAdminForm = e =>{
         const user = {email};
-        fetch('http://localhost:5000/users/admin',{
+        fetch('https://dent-care-server.onrender.com/users/admin',{
             method: 'PUT',
             headers: {
                 'authorization' : `Bearer ${token}`,
@@ -42,26 +42,26 @@ const AddAdmin = () => {
 
 
 
-    const handleDoctorForm = e =>{
-        const user = {doctorEmail};
-        fetch('http://localhost:5000/users/doctor',{
-            method: 'PUT',
-            headers: {
-                'authorization' : `Bearer ${token}`,
-                'content-type' : 'application/json'
-            },
-            body: JSON.stringify(user)
-        })
-        .then(res=>res.json())
-        .then(data=>{ 
-            if(data.modifiedCount){
-                setSuccess(true);
-                console.log("doctor", data);
-            }
+    // const handleDoctorForm = e =>{
+    //     const user = {doctorEmail};
+    //     fetch('https://dent-care-server.onrender.com/users/doctor',{
+    //         method: 'PUT',
+    //         headers: {
+    //             'authorization' : `Bearer ${token}`,
+    //             'content-type' : 'application/json'
+    //         },
+    //         body: JSON.stringify(user)
+    //     })
+    //     .then(res=>res.json())
+    //     .then(data=>{ 
+    //         if(data.modifiedCount){
+    //             setSuccess(true);
+    //             console.log("doctor", data);
+    //         }
             
-        })
-        e.preventDefault();
-    }
+    //     })
+    //     e.preventDefault();
+    // }
 
 
 

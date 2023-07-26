@@ -8,7 +8,7 @@ const AddDonor = () => {
 
 
     const onSubmit = data =>{
-        fetch('http://localhost:5000/donors',{
+        fetch('https://dent-care-server.onrender.com/donors',{
             method: 'POST',
             headers:{
                 'content-type': 'application/json'

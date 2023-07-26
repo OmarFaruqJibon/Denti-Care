@@ -16,18 +16,18 @@ const ManageReviews = () => {
 
 
     useEffect( () => {
-        fetch('http://localhost:5000/reviews')
+        fetch('https://dent-care-server.onrender.com/reviews')
         .then(res => res.json())
         .then(data=>setReviews(data));
     },[]);
 
-    console.log(reviews);
+
 
     const handleDeleteBooking = id =>{
         const proceed = window.confirm('Are you sure you want to delete?');
 
             if(proceed){
-                const url = `http://localhost:5000/reviews/${id}`;
+                const url = `https://dent-care-server.onrender.com/reviews/${id}`;
             fetch((url),{
                 method: 'DELETE',
             })

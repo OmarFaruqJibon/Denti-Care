@@ -24,7 +24,7 @@ const Blog = () => {
 
 
     useEffect( () => {
-        fetch('http://localhost:5000/blogs')
+        fetch('https://dent-care-server.onrender.com/blogs')
         .then(res => res.json())
         .then(data => setUserReview(data))
     }, []);
@@ -39,7 +39,7 @@ const Blog = () => {
         }
     });
 
-console.log(userReview);
+
 const {dentiClr, titleColor} = useStyle();
 
     return (
@@ -84,7 +84,8 @@ const {dentiClr, titleColor} = useStyle();
 
 
                 {userReview.map((review) => (
-                    <SwiperSlide> 
+                    <SwiperSlide key={review.name}> 
+                        
                         <div className='blog'>
                         <Card sx={{ maxWidth: 345 }}>
                             <CardMedia

@@ -19,7 +19,7 @@ const TestReports = () => {
 
 
     useEffect(()=>{
-        const url = `http://localhost:5000/reports?email=${user.email}`;
+        const url = `https://dent-care-server.onrender.com/reports?email=${user.email}`;
         fetch(url)
         .then(res=>res.json())
         .then(data=>setReports(data));

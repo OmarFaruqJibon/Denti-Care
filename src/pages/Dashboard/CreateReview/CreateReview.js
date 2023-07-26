@@ -7,7 +7,7 @@ const CreateReview = () => {
 
 
     const onSubmit = data =>{
-        fetch('http://localhost:5000/reviews',{
+        fetch('https://dent-care-server.onrender.com/reviews',{
             method: 'POST',
             headers:{
                 'content-type': 'application/json'

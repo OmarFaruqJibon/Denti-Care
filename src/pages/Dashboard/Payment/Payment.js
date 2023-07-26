@@ -12,7 +12,7 @@ const Payment = () => {
     const {appoinmentId} = useParams();
 
     useEffect( () => {
-        fetch(`http://localhost:5000/appoinments/${appoinmentId}`)
+        fetch(`https://dent-care-server.onrender.com/appoinments/${appoinmentId}`)
         .then(res => res.json())
         .then(data => setAppoinment(data))
     },[]);
