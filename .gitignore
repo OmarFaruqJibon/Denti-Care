@@ -22,3 +22,9 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+
+server/doctors-portal-firebase-adminsdk.json
+/server/doctors-portal-firebase-adminsdk.json
+/doctors-portal-firebase-adminsdk.json
+doctors-portal-firebase-adminsdk.json
